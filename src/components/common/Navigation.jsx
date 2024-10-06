@@ -16,12 +16,12 @@ export default function Navigation() {
                         </Link>
                         <div className="hidden lg:flex gap-2 p-1 rounded-full bg-white bg-opacity-10 backdrop-blur-lg">
                             <NavLink href="/">Home</NavLink>
-                            <NavLink href="/how-it-works">Hoe Het Werkt</NavLink>
+                            <NavLink href="/cases">Cases</NavLink>
                             <NavLink href="/about">Over ons</NavLink>
                             <NavLink href="/contact">Contact</NavLink>
                         </div>
                         <Link href="/signin" className="hidden lg:flex items-center gap-2 text-white hover:text-pink-500 transition duration-200">
-                            <span className="text-sm font-medium">Sign in</span>
+                            <span className="text-sm font-medium">Boek een call</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M5.5 3L10.5 8L5.5 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             </svg>

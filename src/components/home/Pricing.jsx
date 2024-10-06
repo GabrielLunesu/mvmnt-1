@@ -16,14 +16,13 @@ export default function Pricing() {
                             className={`py-2 px-4 rounded-full ${isMonthly ? 'bg-darkPink-900 text-white' : 'text-darkPink-900'}`}
                             onClick={() => setIsMonthly(true)}
                         >
-                            Monthly
+                            Maandelijks
                         </button>
                         <button 
-                            className={`py-2 px-4 rounded-full ${!isMonthly ? 'bg-darkPink-900 text-white' : 'text-darkPink-900'} flex items-center`}
+                            className={`py-2 px-4 rounded-full ${!isMonthly ? 'bg-darkPink-900 text-white' : 'text-darkPink-900'}`}
                             onClick={() => setIsMonthly(false)}
                         >
-                            Yearly 
-                            <span className="ml-2 text-xs bg-pink-200 text-pink-700 py-1 px-2 rounded-full">10% OFF</span>
+                           Eenmalig
                         </button>
                     </div>
                 </div>
@@ -31,31 +30,31 @@ export default function Pricing() {
                 <div className="flex flex-wrap justify-center gap-8">
                     <PricingCard
                         title="Essential pro"
-                        price={isMonthly ? "€99" : "€1069"}
-                        period={isMonthly ? "/per maand" : "/per jaar"}
+                        price={isMonthly ? "€99" : "€1695"}
+                        period={isMonthly ? "/per maand" : " eenmalig"}
                         features={[
                             "Customized invoices",
                             "Automated reminders",
                             "Enable multiple payments",
                             "Helpful reports"
                         ]}
+                        highlighted={true}
                     />
                     <PricingCard
                         title="Dynamic"
-                        price={isMonthly ? "€175" : "€1890"}
-                        period={isMonthly ? "/per maand" : "/per jaar"}
+                        price={isMonthly ? "€250" : "€2495"}
+                        period={isMonthly ? "/per maand" : " eenmalig"}
                         features={[
                             "Everything in Basic",
                             "Up-to 20 contributors",
                             "Add unlimited collaborators",
                             "Customized dashboard"
                         ]}
-                        highlighted={true}
                     />
                     <PricingCard
                         title="Enterprise"
-                        price={isMonthly ? "€5995" : "€64746"}
-                        period={isMonthly ? "/per maand" : "/per jaar"}
+                        price="€9000"
+                        period=" vanaf "
                         features={[
                             "All in Pro benefits",
                             "Auto sync to your dashboard",
@@ -71,15 +70,15 @@ export default function Pricing() {
 
 function PricingCard({ title, price, period, features, highlighted = false }) {
     const cardClass = highlighted
-        ? "bg-gradient-to-b from-pink-400 to-darkPink-900 text-white"
+        ? "bg-gradient-to-b from-purple-400 to-purple-900 text-white transform scale-105"
         : "bg-white text-darkPink-900 border border-gray-200";
 
     const buttonClass = highlighted
-        ? "bg-white text-darkPink-900 hover:bg-gray-100"
-        : "bg-darkPink-900 text-white hover:bg-darkPink-800";
+        ? "bg-white text-purple-900 hover:bg-gray-100"
+        : "bg-purple-900 text-white hover:bg-purple-800";
 
     return (
-        <div className={`w-full md:w-80 p-6 rounded-3xl ${cardClass}`}>
+        <div className={`w-full md:w-80 p-6 rounded-3xl shadow-lg transition-all duration-300 ${cardClass}`}>
             <h3 className="text-2xl font-semibold mb-4">{title}</h3>
             <div className="flex items-end mb-6">
                 <span className="text-4xl font-bold">{price}</span>
@@ -91,7 +90,7 @@ function PricingCard({ title, price, period, features, highlighted = false }) {
             <ul className="space-y-3">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className={`w-5 h-5 mr-2 ${highlighted ? 'text-purple-500' : 'text-purple-500'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         {feature}
