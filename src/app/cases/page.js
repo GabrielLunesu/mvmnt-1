@@ -1,6 +1,5 @@
 "use client"
-import React, { useRef, useState, useEffect } from 'react';
-import { useSpring, animated } from '@react-spring/web';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { caseStudies } from '@/data/caseStudies';
@@ -21,15 +20,24 @@ const CaseStudy = ({ caseData, index }) => {
               quality={100}
             />
           </div>
+          {/* Mobile button */}
+          <div className="absolute inset-0 flex items-center justify-center md:hidden">
+            <Link href={`/cases/${caseData.slug}`} className="z-10 inline-block bg-white text-purple-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all">
+              Learn More
+            </Link>
+          </div>
         </div>
         <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-purple-900 via-purple-600 to-purple-900"></div>
           <div className="z-10 text-center px-4 relative">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">{caseData.title}</h2>
             <p className="text-xl md:text-2xl mb-8 text-white max-w-xl mx-auto">{caseData.description}</p>
-            <Link href={`/cases/${caseData.slug}`} className="inline-block bg-white text-purple-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all">
-              Learn More
-            </Link>
+            {/* Desktop button */}
+            <div className="hidden md:block">
+              <Link href={`/cases/${caseData.slug}`} className="inline-block bg-white text-purple-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all">
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </div>
