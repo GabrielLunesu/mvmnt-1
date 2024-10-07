@@ -135,8 +135,15 @@ module.exports = {
         'falling-star-1': 'fallAndFade 5s ease-in-out infinite',
         'falling-star-2': 'fallAndFade 5s ease-in-out 1.67s infinite',
         'falling-star-3': 'fallAndFade 5s ease-in-out 3.33s infinite',
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         flow: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(10px)' },
