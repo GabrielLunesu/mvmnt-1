@@ -69,7 +69,7 @@ export default function Hero() {
         const text = textRef.current;
         const svg = svgRef.current;
         const colors = [
-            { main: '#ffffff', shades: ['#490a3a', '#490a3a', '#490a3a', '#490a3a'] },
+            { main: '#ffffff', shades: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'] },
         ];
 
         const animateTextIn = () => {
@@ -189,7 +189,7 @@ export default function Hero() {
     return (
         <section className="bg-gradient-to-t from-white via-purple-700 to-purple-900 from-white bs-section-dragged">
             <div className="container mx-auto px-4">
-                <div className="relative pt-64 pb-14">
+                <div className="relative pb-14">
                     <Image
                         className="hidden lg:block absolute left-16 xl:left-36 2xl:left-56 3xl:left-96 top-96"
                         src={StarsPattern1}
@@ -204,7 +204,7 @@ export default function Hero() {
                         width={76}
                         height={132}
                     />
-                    <div className="relative z-50">
+                    <div className="relative pt-40 z-50">
                         <h1 className="font-heading text-white text-center text-4xl sm:text-5xl md:text-7xl font-bold max-w-6xl mx-auto mb-6">
                             <span ref={textRef} className="inline-block"></span> maakt meer dan alleen een website
                         </h1>
