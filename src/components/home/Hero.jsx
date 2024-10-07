@@ -187,7 +187,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="bg-gradient-to-t from-white via-purple-700 to-black from-white bs-section-dragged">
+        <section className="bg-gradient-to-t from-white via-purple-700 to-purple-900 from-white bs-section-dragged">
             <div className="container mx-auto px-4">
                 <div className="relative pt-64 pb-14">
                     <Image

@@ -7,7 +7,7 @@ export default function Hero() {
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
     return (
-        <section className="bg-gradient-to-t from-white via-purple-700 to-purple-900">
+        <section className="bg-gradient-to-t from-white via-purple-700 to-purple-900 h-screen">
             <div className="container mx-auto px-4">
                 <div className="relative pt-24 pb-14">
                     {/* <Image 

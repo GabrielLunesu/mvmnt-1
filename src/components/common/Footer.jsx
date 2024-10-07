@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <React.Fragment>
             <>
-                <section className="py-20 bg-darkPink-900">
+                <section className="py-20 bg-purple-900">
   <div className="container mx-auto px-4">
     <div className="pb-20 border-b border-white border-opacity-30 mb-10">
       <div className="flex flex-wrap justify-between -m-4">
