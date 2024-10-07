@@ -187,7 +187,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="bg-gradient-to-t from-white via-purple-700 to-purple-900 from-white bs-section-dragged">
+        <section className="bg-gradient-to-t from-white via-purple-700 to-purple-900 from-white bs-section-dragged pt-20">
             <div className="container mx-auto px-4">
                 <div className="relative pb-14">
                     <Image
@@ -204,7 +204,7 @@ export default function Hero() {
                         width={76}
                         height={132}
                     />
-                    <div className="relative pt-44 z-50">
+                    <div className="relative pt-28 z-10">
                         <h1 className="font-heading text-white text-center text-4xl sm:text-5xl md:text-7xl font-bold max-w-6xl mx-auto mb-6">
                             <span ref={textRef} className="inline-block"></span> maakt meer dan alleen een website
                         </h1>

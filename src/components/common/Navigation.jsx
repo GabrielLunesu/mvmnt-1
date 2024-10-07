@@ -20,7 +20,7 @@ export default function Navigation() {
     }, []);
 
     return (
-        <section className="absolute top-0 left-0 right-0 z-50">
+        <section className="absolute top-0 left-0 right-0 z-[100]">
             <nav className="py-5">
                 <div className="container mx-auto px-6">
                     {isMobile ? (
