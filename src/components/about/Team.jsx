@@ -37,17 +37,17 @@ export default function Team() {
         </div>
         <div className="flex flex-wrap -m-4">
           <TeamMember 
-            name="David Dobryk"
+            name="Gabriel Lunesu"
             role="Founder & CEO"
             imageSrc="https://images.squarespace-cdn.com/content/v1/592702373a04114633ee6536/1526588154869-XBVLUKKJZBQHV2X3EI98/Natural+Light+Actor+Headshot+in+NYC+-+Eden"
           />
           <TeamMember 
-            name="Milena Graz"
+            name="Lon Ploemen"
             role="Founder & CEO"
             imageSrc="https://images.squarespace-cdn.com/content/v1/592702373a04114633ee6536/1526588154869-XBVLUKKJZBQHV2X3EI98/Natural+Light+Actor+Headshot+in+NYC+-+Eden"
           />
           <TeamMember 
-            name="Mike Nelson"
+            name="Yasser Khai"
             role="Head of Technology"
             imageSrc="https://images.squarespace-cdn.com/content/v1/592702373a04114633ee6536/1526588154869-XBVLUKKJZBQHV2X3EI98/Natural+Light+Actor+Headshot+in+NYC+-+Eden"
           />

@@ -55,8 +55,8 @@ const FaqItem = ({ question, answer }) => {
 export default function Faq() {
   const faqItems = [
     {
-      question: "What is Vista?",
-      answer: "Vista is an innovative bookkeeping software designed for modern business owners. It simplifies financial management and provides intuitive tools for tracking transactions, managing accounts, and generating reports."
+      question: "What is MVMNT?",
+      answer: "MVMNT is an innovative bookkeeping software designed for modern business owners. It simplifies financial management and provides intuitive tools for tracking transactions, managing accounts, and generating reports."
     },
     {
       question: "How to add company details on my invoice?",
