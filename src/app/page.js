@@ -1,4 +1,4 @@
-import Testimonials from '@/components/home/Testimonials';
+import Testimonials from '@/components/common/Testimonials';
 import AnimatedTestimonials from '@/components/home/Testimonials1';
 import Hero from '@/components/home/Hero';
 import HowItWorks from '@/components/home/HowItWorks';
@@ -10,7 +10,8 @@ export default function Home() {
     <>
       <Hero />
       {/* <Testimonials /> */}
-      <AnimatedTestimonials />
+      <Testimonials />
+      
       <HowItWorks />
       <Pricing />
       <CTA />

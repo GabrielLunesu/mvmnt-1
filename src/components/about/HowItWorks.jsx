@@ -73,7 +73,7 @@ export default function HowItWorks() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-purple-900 mx-4 md:mx-20 lg:mx-40 rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg"
+              className="bg-purple-900 mx-0 md:mx-20 lg:mx-40 rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg"
             >
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-6 md:mb-0">

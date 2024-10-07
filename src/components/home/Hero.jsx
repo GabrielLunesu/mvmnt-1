@@ -204,7 +204,7 @@ export default function Hero() {
                         width={76}
                         height={132}
                     />
-                    <div className="relative pt-40 z-50">
+                    <div className="relative pt-44 z-50">
                         <h1 className="font-heading text-white text-center text-4xl sm:text-5xl md:text-7xl font-bold max-w-6xl mx-auto mb-6">
                             <span ref={textRef} className="inline-block"></span> maakt meer dan alleen een website
                         </h1>
@@ -213,7 +213,7 @@ export default function Hero() {
                             Je partner in digitale groei. Wij creëren niet zomaar websites, maar bouwen complete online fundamenten voor ondernemers. Met onze betaalbare, SEO-geoptimaliseerde oplossingen zet je je bedrijf stevig op de digitale kaart.
                         </p>
                         <div className="mb-12 text-center">
-                            <Link href="#" className="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full">
+                            <Link href="/contact" className="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full">
                                 <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full"></div>
                                 <div className="relative z-50 flex items-center py-2 px-4 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200">
                                     <p className="text-pinkSecondary-900">Contact</p>

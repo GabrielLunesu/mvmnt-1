@@ -19,7 +19,7 @@ export default function HowItWorks() {
               <span class="text-purple-900 font-bold">Dolor sit amet consectutar</span>
               <h2 class="text-4xl lg:text-5xl font-bold font-heading">Bouw & lanceer zoals jij dat wilt.</h2>
             </div>
-            <div class="flex flex-wrap   mx-24">
+            <div class="flex flex-wrap   mx-12">
               <div class="mb-16 lg:mb-0 relative w-full md:w-1/2 lg:w-1/3 px-4">
                 <svg class="absolute top-0 left-0 -mt-10 ml-4 text-purple-500" width="36" height="101" viewbox="0 0 36 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.2" d="M16.736 101V21.224L0.176 25.112V11L24.512 0.199993H35.888V101H16.736Z" fill="currentColor"></path>
@@ -57,7 +57,6 @@ export default function HowItWorks() {
       </section>
     );
 }
-
 function StepCard({ number, title, description, icon }) {
     return (
         <div className="w-full lg:w-1/3 p-4 mb-8 lg:mb-0 relative z-10">
@@ -76,4 +75,5 @@ function StepCard({ number, title, description, icon }) {
         </div>
     );
 }
+
 

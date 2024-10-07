@@ -140,7 +140,7 @@ const AnimatedTestimonials = () => {
         <Image src={highfive} alt="highfive" width={500} height={500} />
       </div>
       {isMobile ? (
-        <div className="mt-20">
+        <div className="mt-20 p-10">
           <MobileSlider testimonials={testimonials} />
         </div>
       ) : (

@@ -4,7 +4,7 @@ export default function CTA() {
     return (
         <React.Fragment>
             <>
-                <section className="pt-24 pb-32">
+                <section className="pt-24 pb-32 bg-gradient-to-t from-purple-900 via-purple-500 to-white">
   <div className="container mx-auto px-4">
     <h1 className="font-heading text-center text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
     <p className="text-opacity-70 text-center text-lg mb-20 max-w-2xl mx-auto">Our team is here to help you access capital and grow on your terms. Check out the resources below and reach out directly if you have any questions.</p>
