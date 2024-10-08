@@ -58,35 +58,35 @@ export const InfiniteMovingCards = ({
     (<div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}>
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}>
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border-4 border-purple-900 flex-shrink-0 px-8 py-6 md:w-[450px] bg-white bg-opacity-10 backdrop-blur-md text-purple-900"
+            className="w-[250px] sm:w-[350px] max-w-full relative rounded-2xl border-4 border-purple-900 flex-shrink-0 px-4 sm:px-8 py-4 sm:py-6 bg-white bg-opacity-10 backdrop-blur-md text-purple-900"
             key={item.name}>
             <blockquote>
               <div className="flex items-center mb-4">
                 <Image
                   src={item.image}
                   alt={item.name}
-                  width={50}
-                  height={50}
-                  className="rounded-full mr-4"
+                  width={40}
+                  height={40}
+                  className="rounded-full mr-3"
                 />
                 <div>
-                  <p className="text-lg font-semibold">{item.name}</p>
-                  <p className="text-sm text-purple-700">{item.title}</p>
+                  <p className="text-sm sm:text-base font-semibold">{item.name}</p>
+                  <p className="text-xs sm:text-sm text-purple-700">{item.title}</p>
                 </div>
               </div>
-              <p className="relative z-20 text-sm leading-[1.6] font-normal">
+              <p className="relative z-20 text-xs sm:text-sm leading-[1.6] font-normal">
                 {item.quote}
               </p>
             </blockquote>
