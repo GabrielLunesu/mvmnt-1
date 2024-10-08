@@ -23,8 +23,7 @@ export default async function Page({ params }) {
     const html = await renderer.render(...blocks);
 
     return (
-        <div>
-            {/* <div>{page.properties.title.title[0].plain_text}</div> */}
+        <div className="items-center justify-center">
             <div dangerouslySetInnerHTML={{ __html: html }}></div>
         </div>
     );
