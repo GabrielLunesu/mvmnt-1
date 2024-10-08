@@ -40,7 +40,7 @@ const CaseStudy = ({ caseData, index }) => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     );
   };
