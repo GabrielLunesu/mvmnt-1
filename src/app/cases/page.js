@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { caseStudies } from '@/data/caseStudies';
+import { Hero } from '@/components/cases/Hero';
 
 const CaseStudy = ({ caseData, index }) => {
     const isEven = index % 2 === 0;
@@ -48,9 +49,10 @@ const CaseStudy = ({ caseData, index }) => {
     return (
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
         <div className="h-screen bg-purple-900 flex items-center justify-center snap-start">
-          <h1 className="text-6xl md:text-7xl font-bold text-white text-center px-4">
+          {/* <h1 className="text-6xl md:text-7xl font-bold text-white text-center px-4">
             Our Case Studies
-          </h1>
+          </h1> */}
+          <Hero />
         </div>
         {caseStudies.map((caseItem, index) => (
           <div key={caseItem.id} className="snap-start">
