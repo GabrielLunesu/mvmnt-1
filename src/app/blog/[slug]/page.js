@@ -24,7 +24,7 @@ export default async function Page({ params }) {
 
     return (
         <div className="items-center justify-center">
-            <div dangerouslySetInnerHTML={{ __html: html }}></div>
+            <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto" dangerouslySetInnerHTML={{ __html: html }}></div>
         </div>
     );
 }

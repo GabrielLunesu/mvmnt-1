@@ -1,13 +1,10 @@
-import 'server-only';
 import { Client } from '@notionhq/client';
-import React from 'react';
 
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 });
 
 export async function fetchPages() {
-    "use server";
     return notion.databases.query({
         database_id: process.env.NOTION_DATABASE_ID,
         filter: {
@@ -20,7 +17,6 @@ export async function fetchPages() {
 }
 
 export async function fetchBySlug(slug) {
-    "use server";
     const res = await notion.databases.query({
         database_id: process.env.NOTION_DATABASE_ID,
         filter:{
@@ -34,7 +30,6 @@ export async function fetchBySlug(slug) {
 }
 
 export async function fetchPageBlocks(pageId) {
-    "use server";
     const res = await notion.blocks.children.list({ 
         block_id: pageId 
     });

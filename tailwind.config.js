@@ -160,5 +160,5 @@ module.exports = {
       // ... (other theme extensions remain the same)
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
