@@ -13,6 +13,7 @@ export default async function BlogPage() {
 
     return (
         <BlogList pages={pages} />
+       
     );
 
 
