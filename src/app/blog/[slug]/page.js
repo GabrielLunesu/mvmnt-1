@@ -1,5 +1,5 @@
 import hljsPlugin from "@notion-render/hljs-plugin";
-import { fetchBySlug, fetchPageBlocks, notion } from '../../../lib/notion';
+import { fetchBySlug, fetchPageBlocks, notion } from '@/lib/notion';
 import { NotionRenderer } from '@notion-render/client';
 import { bookmarkPlugin } from '@notion-render/bookmark-plugin';
 import { fetchPages } from '@/lib/notion';
