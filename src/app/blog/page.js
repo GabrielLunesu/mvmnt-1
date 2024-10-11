@@ -2,20 +2,14 @@
 
 import React from "react";
 import BlogList from "@/components/blog/BlogList";
+import { Hero } from "@/components/blog/Hero";
 
-import { fetchPages } from "@/lib/notion";
-
-
-
-export default async function BlogPage() {
-    const pages = await fetchPages();
-
-
+export default function BlogPage() {
     return (
-        <BlogList pages={pages} />
-       
+        <div className="">
+            <Hero />
+            <BlogList />
+        </div>
     );
-
-
 }
 
