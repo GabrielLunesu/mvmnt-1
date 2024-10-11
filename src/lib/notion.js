@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client';
 
-const notion = new Client({
+export const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 });
 
@@ -17,16 +17,21 @@ export async function fetchPages() {
 }
 
 export async function fetchBySlug(slug) {
-    const res = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID,
-        filter:{
-            property: 'slug',
-            rich_text: {
-                equals: slug,
+    try {
+        const res = await notion.databases.query({
+            database_id: process.env.NOTION_DATABASE_ID,
+            filter:{
+                property: 'slug',
+                rich_text: {
+                    equals: slug,
+                }
             }
-        }
-    });
-    return res.results[0] || undefined;
+        });
+        return res.results[0] || null;
+    } catch (error) {
+        console.error('Error fetching page by slug:', error);
+        return null;
+    }
 }
 
 export async function fetchPageBlocks(pageId) {
