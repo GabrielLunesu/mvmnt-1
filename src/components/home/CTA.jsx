@@ -6,8 +6,8 @@ export default function CTA() {
             <>
                 <section className="pt-24 pb-32 bg-gradient-to-t from-purple-900 via-purple-500 to-white">
   <div className="container mx-auto px-4">
-    <h1 className="font-heading text-center text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
-    <p className="text-opacity-70 text-center text-lg mb-20 max-w-2xl mx-auto">Our team is here to help you access capital and grow on your terms. Check out the resources below and reach out directly if you have any questions.</p>
+    <h1 className="font-heading text-center text-4xl md:text-6xl font-bold mb-6">Klaar om te starten?</h1>
+    <p className="text-opacity-70 text-center text-lg mb-20 max-w-2xl mx-auto">Laten we jouw visie werkelijkheid maken. Vul ons contactformulier in en we nemen snel contact met je op.</p>
     <div className="rounded-2xl border border-white border-opacity-20 p-3 bg-white bg-opacity-10 max-w-xl mx-auto">
       <div className="rounded-2xl bg-darkPink-900 w-full p-8">
         <form action>

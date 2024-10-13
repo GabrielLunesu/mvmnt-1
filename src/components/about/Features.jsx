@@ -19,29 +19,29 @@ export default function Features() {
   return (
     <section className="bg-white  py-28">
       <div className="container mx-auto px-4">
-        <p className="uppercase text-center text-purple-900 text-xs tracking-widest mb-4">FEATURES</p>
-        <h1 className="font-heading text-purple-900 text-center text-4xl md:text-5xl font-bold mb-4">Designed for the modern business owners</h1>
-        <p className="text-purple-900 text-opacity-70 text-lg text-center max-w-2xl mx-auto mb-20">Our software provides intuitive bookkeeping solutions, allowing you to focus on growing your business rather than crunching numbers.</p>
+        <p className="uppercase text-center text-purple-900 text-xs tracking-widest mb-4">Wat we doen</p>
+        <h1 className="font-heading text-purple-900 text-center text-4xl md:text-5xl font-bold mb-4">Ontworpen voor de moderne ondernemer</h1>
+        <p className="text-purple-900 text-opacity-70 text-lg text-center max-w-2xl mx-auto mb-20">Als full-service digital agency met een specialisatie in web design bieden we complete oplossingen die jouw bedrijf laten groeien, zonder dat je in de techniek hoeft te duiken.</p>
         <div className="flex flex-wrap -m-4">
           <FeatureCard 
             iconSrc="/vista-assets/images/features/money.svg"
-            title="Simple Accounting"
-            description="Keep track of your financial transactions with ease and simplicity."
+            title="Gebruiksvriendelijk en snel"
+            description="Onze websites combineren intuïtief design met topprestaties en snelle laadtijden."
           />
-          <FeatureCard 
+          <FeatureCard
             iconSrc="/vista-assets/images/features/profile.svg"
-            title="Multiple Accounts"
-            description="Gain a comprehensive financial overview of all your accounts."
+            title="SEO-geoptimaliseerd vanaf dag één"
+            description="We zorgen ervoor dat jouw website meteen goed vindbaar is in zoekmachines, voor maximale online zichtbaarheid."
           />
           <FeatureCard 
             iconSrc="/vista-assets/images/features/chart.svg"
-            title="Detailed Analytics"
-            description="Gain in-depth insights into your financial well-being with a diverse range of data."
+            title="Volledig schaalbaar"
+            description="Van eenvoudige bedrijfswebsites tot uitgebreide platforms, wij bieden oplossingen die met jouw bedrijf meegroeien."
           />
           <FeatureCard 
             iconSrc="/vista-assets/images/features/cloud.svg"
-            title="Cloud-Based"
-            description="Our platform is cloud-based, you can access your financial data from anywhere, at any time."
+            title="Alles onder één dak"
+            description="Naast web design verzorgen we ook marketing, SEO, en onderhoud, zodat je je kunt focussen op wat echt telt: ondernemen."
           />
         </div>
       </div>

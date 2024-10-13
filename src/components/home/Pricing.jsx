@@ -8,7 +8,7 @@ export default function Pricing() {
         <section className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <h2 className="font-heading text-center text-5xl font-bold mb-4 text-darkPink-900">Flexibel, voor jou</h2>
-                <p className="text-center text-gray-600 mb-10">Prijzen die met je mee groeien</p>
+                <p className="text-center w-1/2 mx-auto text-gray-600 mb-10">Op maat gemaakte pakketten die aansluiten bij jouw unieke behoeften. Betaalbare oplossingen met maximale impact, ongeacht jouw budget.</p>
                 
                 <div className="flex justify-center mb-12">
                     <div className="bg-gray-100 p-1 rounded-full inline-flex">
