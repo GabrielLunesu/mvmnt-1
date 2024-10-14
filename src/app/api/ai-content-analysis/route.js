@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server';
 import axios from 'axios';
 import OpenAI from 'openai';
 import { JSDOM } from 'jsdom';
@@ -7,19 +8,13 @@ const openai = new OpenAI({
 });
 
 export async function POST(req) {
-  const { searchParams } = new URL(req.url);
-  const url = searchParams.get('url');
-  const body = await req.json();
-  const { business, audience, keywords } = body;
-
-  if (!url) {
-    return new Response(JSON.stringify({ error: 'URL is vereist' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-
   try {
+    const { url, business, audience, keywords } = await req.json();
+
+    if (!url) {
+      return NextResponse.json({ error: 'URL is vereist' }, { status: 400 });
+    }
+
     // Measure loading time
     const startTime = Date.now();
 
@@ -151,19 +146,9 @@ Inhoud (eerste 1000 tekens): ${bodyText.substring(0, 1000)}...
     cleanedContent = cleanedContent.replace(/```json\n?/, '').replace(/```\n?$/, '');
 
     // Parse the response into a structured format
-    let analysis;
-    try {
-      analysis = JSON.parse(cleanedContent);
-    } catch (parseError) {
-      console.error('Error parsing AI response:', parseError);
-      console.log('Raw AI response:', cleanedContent);
-      throw new Error('Failed to parse AI response');
-    }
+    const analysis = JSON.parse(cleanedContent);
 
-    return new Response(JSON.stringify({ analysis }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return NextResponse.json({ analysis });
   } catch (error) {
     console.error('Gedetailleerde fout:', error);
     let errorMessage = 'Fout bij het uitvoeren van AI-analyse';
@@ -175,9 +160,6 @@ Inhoud (eerste 1000 tekens): ${bodyText.substring(0, 1000)}...
     } else {
       errorMessage += `: ${error.message}`;
     }
-    return new Response(JSON.stringify({ error: errorMessage }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
