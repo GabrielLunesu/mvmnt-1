@@ -165,7 +165,7 @@ export default function AiSeoCheckerForm() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl -my-32 px-4 sm:px-6 md:px-8">
+    <div className="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl my-8 px-4 sm:px-6 md:px-8">
       <AnimatePresence mode="wait">
         {step === 0 && (
           <div className="p-6 md:p-12 bg-gradient-to-br from-red-600 via-purple-600 to-indigo-600 rounded-t-lg">

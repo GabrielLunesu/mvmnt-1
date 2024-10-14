@@ -147,7 +147,14 @@ Inhoud (eerste 1000 tekens): ${bodyText.substring(0, 1000)}...
     cleanedContent = cleanedContent.replace(/```json\n?/, '').replace(/```\n?$/, '');
 
     // Parse the response into a structured format
-    const analysis = JSON.parse(cleanedContent);
+    let analysis;
+    try {
+      analysis = JSON.parse(cleanedContent);
+    } catch (parseError) {
+      console.error('Error parsing AI response:', parseError);
+      console.log('Raw AI response:', cleanedContent);
+      return NextResponse.json({ error: 'Kon de AI-analyse niet verwerken. Probeer het opnieuw.' }, { status: 500 });
+    }
 
     return NextResponse.json({ analysis });
   } catch (error) {
