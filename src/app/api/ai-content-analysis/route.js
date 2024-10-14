@@ -132,14 +132,25 @@ Inhoud (eerste 1000 tekens): ${bodyText.substring(0, 1000)}...
     `;
 
     // Use OpenAI API for content analysis
-    const aiResponse = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
-      messages: [
-        { role: 'system', content: 'Je bent een SEO-expert. Analyseer de gegeven inhoud en geef gedetailleerde SEO-aanbevelingen in het gevraagde JSON-formaat. Alle output moet in het Nederlands zijn. Geef alleen de JSON terug zonder extra opmaak of codeblokken.' },
-        { role: 'user', content: prompt },
-      ],
-      max_tokens: 2000,
-    });
+    let aiResponse;
+    try {
+      aiResponse = await openai.chat.completions.create({
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: 'Je bent een SEO-expert. Analyseer de gegeven inhoud en geef gedetailleerde SEO-aanbevelingen in het gevraagde JSON-formaat. Alle output moet in het Nederlands zijn. Geef alleen de JSON terug zonder extra opmaak of codeblokken.' },
+          { role: 'user', content: prompt },
+        ],
+        max_tokens: 2000,
+      });
+    } catch (openAiError) {
+      console.error('OpenAI API Error:', openAiError);
+      return NextResponse.json({ error: `OpenAI API fout: ${openAiError.message}` }, { status: 500 });
+    }
+
+    if (!aiResponse.choices || aiResponse.choices.length === 0) {
+      console.error('Unexpected OpenAI response:', aiResponse);
+      return NextResponse.json({ error: 'Onverwachte respons van AI' }, { status: 500 });
+    }
 
     let cleanedContent = aiResponse.choices[0].message.content.trim();
     
@@ -153,7 +164,7 @@ Inhoud (eerste 1000 tekens): ${bodyText.substring(0, 1000)}...
     } catch (parseError) {
       console.error('Error parsing AI response:', parseError);
       console.log('Raw AI response:', cleanedContent);
-      return NextResponse.json({ error: 'Kon de AI-analyse niet verwerken. Probeer het opnieuw.' }, { status: 500 });
+      return NextResponse.json({ error: 'Kon de AI-analyse niet verwerken. Ruwe respons: ' + cleanedContent }, { status: 500 });
     }
 
     return NextResponse.json({ analysis });
