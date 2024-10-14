@@ -59,21 +59,22 @@ export default function AiSeoCheckerForm() {
     const processedUrl = preprocessUrl(url);
 
     try {
-      const res = await fetch(`/api/ai-content-analysis?url=${encodeURIComponent(processedUrl)}`, {
+      const res = await fetch(`/api/ai-content-analysis`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ business, audience, keywords }),
+        body: JSON.stringify({ url: processedUrl, business, audience, keywords }),
       });
       if (!res.ok) {
-        throw new Error('Kon geen AI-analyse ophalen');
+        const errorData = await res.json();
+        throw new Error(`HTTP error! status: ${res.status}, message: ${errorData.error || 'Unknown error'}`);
       }
       const data = await res.json();
       setAnalysis(data.analysis);
     } catch (error) {
       console.error('Fout bij het ophalen van AI-analyse:', error);
-      setError('Kon geen AI-analyse uitvoeren. Probeer het opnieuw.');
+      setError(`Kon geen AI-analyse uitvoeren. ${error.message}`);
     } finally {
       setLoading(false);
     }

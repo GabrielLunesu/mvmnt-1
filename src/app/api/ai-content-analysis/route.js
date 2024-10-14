@@ -9,7 +9,8 @@ const openai = new OpenAI({
 
 export async function POST(req) {
   try {
-    const { url, business, audience, keywords } = await req.json();
+    const body = await req.json();
+    const { url, business, audience, keywords } = body;
 
     if (!url) {
       return NextResponse.json({ error: 'URL is vereist' }, { status: 400 });
