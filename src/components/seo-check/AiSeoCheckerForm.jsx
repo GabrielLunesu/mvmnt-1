@@ -27,6 +27,8 @@ export default function AiSeoCheckerForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [step, setStep] = useState(0);
+  const [initialData, setInitialData] = useState(null);
+  const [analysisResults, setAnalysisResults] = useState({});
 
   useEffect(() => {
     if (analysis) {
@@ -54,7 +56,8 @@ export default function AiSeoCheckerForm() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    setAnalysis(null);
+    setInitialData(null);
+    setAnalysisResults({});
 
     const processedUrl = preprocessUrl(url);
 
@@ -67,18 +70,131 @@ export default function AiSeoCheckerForm() {
         body: JSON.stringify({ url: processedUrl, business, audience, keywords }),
       });
       if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(`HTTP error! status: ${res.status}, message: ${errorData.error || 'Unknown error'}`);
+        throw new Error(`HTTP error! status: ${res.status}`);
       }
       const data = await res.json();
-      setAnalysis(data.analysis);
+      setInitialData(data.initialData);
+      setStep(1);
     } catch (error) {
-      console.error('Fout bij het ophalen van AI-analyse:', error);
-      setError(`Kon geen AI-analyse uitvoeren. ${error.message}`);
+      console.error('Fout bij het ophalen van initiële data:', error);
+      setError(`Kon geen website-analyse uitvoeren. ${error.message}`);
     } finally {
       setLoading(false);
     }
   };
+
+  const analyzeSection = async (section, prompt) => {
+    try {
+      const res = await fetch(`/api/analyze-section`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ section, prompt }),
+      });
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data = await res.json();
+      setAnalysisResults(prev => ({ ...prev, [section]: data.analysis }));
+    } catch (error) {
+      console.error(`Fout bij het analyseren van sectie ${section}:`, error);
+      setAnalysisResults(prev => ({ ...prev, [section]: { error: `Kon ${section} niet analyseren.` } }));
+    }
+  };
+
+  useEffect(() => {
+    if (initialData) {
+      analyzeSection('loadingTime', `
+        Analyseer de laadtijd van ${initialData.loadTime}ms voor de website. 
+        Geef een beoordeling van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van de laadtijd",
+          "improvement": "Suggestie voor verbetering",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('wordCount', `
+        Analyseer het woordenaantal van ${initialData.wordCount} woorden op de webpagina.
+        Geef een beoordeling van 1-10, waarbij 1-3 te weinig is, 4-7 voldoende, en 8-10 optimaal.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van het woordenaantal",
+          "improvement": "Suggestie voor verbetering indien nodig",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('altText', `
+        Analyseer het alt-tekstgebruik: ${initialData.altTextData.imagesWithAlt}/${initialData.altTextData.totalImages} afbeeldingen hebben alt-tekst, ${initialData.altTextData.altTextCoverage} dekking.
+        Geef een beoordeling van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van alt-tekstgebruik",
+          "improvement": "Suggestie voor verbetering",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('h1', `
+        Analyseer de H1 tag: "${initialData.h1}".
+        Beoordeel de relevantie en SEO-vriendelijkheid van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van de H1 tag",
+          "improvement": "Suggestie voor verbetering indien nodig",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('metaDescription', `
+        Analyseer de meta beschrijving: "${initialData.metaDescription}".
+        Beoordeel de kwaliteit en SEO-vriendelijkheid van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van de meta beschrijving",
+          "improvement": "Suggestie voor verbetering indien nodig",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('keywordUsage', `
+        Analyseer het zoekwoordgebruik: ${JSON.stringify(initialData.keywordData.keywordOccurrences)} 
+        met dichtheid ${JSON.stringify(initialData.keywordData.keywordDensity)}.
+        Beoordeel de keyword optimalisatie van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van zoekwoordgebruik",
+          "improvement": "Suggestie voor verbetering",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('contentQuality', `
+        Analyseer de inhoudskwaliteit en leesbaarheid van de eerste 1000 tekens: "${initialData.contentPreview}".
+        Beoordeel de kwaliteit van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van inhoudskwaliteit",
+          "improvement": "Suggestie voor verbetering",
+          "rating": 5
+        }
+      `);
+
+      analyzeSection('businessAndAudience', `
+        Analyseer hoe goed de inhoud aansluit bij het bedrijf (${initialData.business}) en de doelgroep (${initialData.audience}).
+        Beoordeel de afstemming van 1-10, waarbij 1-3 slecht is, 4-7 gemiddeld, en 8-10 goed.
+        Retourneer een JSON object met de volgende structuur:
+        {
+          "analysis": "Korte analyse van afstemming op bedrijf en doelgroep",
+          "improvement": "Suggestie voor verbetering",
+          "rating": 5
+        }
+      `);
+    }
+  }, [initialData]);
 
   const getRatingColor = (rating) => {
     if (rating >= 8) return 'text-green-500';
@@ -92,7 +208,7 @@ export default function AiSeoCheckerForm() {
     return <FaTimesCircle className="text-red-500" />;
   };
 
-  const SEOCheckWidget = ({ title, icon, content, analysis, improvement, rating, extraData }) => (
+  const SEOCheckWidget = ({ title, icon, content, analysis, improvement, rating, extraData, isLoading }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -102,56 +218,69 @@ export default function AiSeoCheckerForm() {
       <h4 className="text-lg font-semibold mb-2 flex items-center">
         {icon}
         <span className="ml-2">{title}</span>
-        <span className={`ml-auto ${getRatingColor(rating)}`}>{rating}/10</span>
-        {getRatingIcon(rating)}
+        {isLoading ? (
+          <FaSpinner className="animate-spin ml-auto" />
+        ) : (
+          <>
+            <span className={`ml-auto ${getRatingColor(rating)}`}>{rating}/10</span>
+            {getRatingIcon(rating)}
+          </>
+        )}
       </h4>
-      {content && (
-        <div className="mb-2">
-          <p className="font-medium">Huidige inhoud:</p>
-          <p className="italic">{content}</p>
-        </div>
-      )}
-      {extraData && (
-        <div className="mb-2">
-          {Object.entries(extraData).map(([key, value]) => (
-            <p key={key}>
-              <span className="font-medium">{key}:</span> {value}
-            </p>
-          ))}
-        </div>
-      )}
-      <div className="mb-2">
-        <p className="font-medium">Analyse:</p>
-        <p>{analysis}</p>
-      </div>
-      {improvement && (
-        <div>
-          <p className="font-medium">Aanbevelingen:</p>
-          <p>{improvement}</p>
-        </div>
+      {!isLoading && (
+        <>
+          {content && (
+            <div className="mb-2">
+              <p className="font-medium">Huidige inhoud:</p>
+              <p className="italic">{typeof content === 'object' ? JSON.stringify(content) : content}</p>
+            </div>
+          )}
+          {extraData && (
+            <div className="mb-2">
+              {Object.entries(extraData).map(([key, value]) => (
+                <p key={key}>
+                  <span className="font-medium">{key}:</span> {typeof value === 'object' ? JSON.stringify(value) : value}
+                </p>
+              ))}
+            </div>
+          )}
+          <div className="mb-2">
+            <p className="font-medium">Analyse:</p>
+            <p>{typeof analysis === 'object' ? JSON.stringify(analysis) : analysis}</p>
+          </div>
+          {improvement && (
+            <div>
+              <p className="font-medium">Aanbevelingen:</p>
+              <p>{typeof improvement === 'object' ? JSON.stringify(improvement) : improvement}</p>
+            </div>
+          )}
+        </>
       )}
     </motion.div>
   );
 
   const renderAnalysisSection = (title, icon, dataKey) => {
-    if (!analysis || !analysis[dataKey]) return null;
+    const data = analysisResults[dataKey] || {};
+    const isLoading = !data.analysis;
 
-    const data = analysis[dataKey];
-    const value = data.value || 'N/A';
-    const analysisText = data.analysis || '';
-    const improvement = data.improvement || '';
-    const content = data.content;
-    const rating = data.rating || 5;
+    let extraData = initialData ? { [title]: initialData[dataKey] } : null;
+    if (extraData && typeof extraData[title] === 'object') {
+      extraData = Object.entries(extraData[title]).reduce((acc, [key, value]) => {
+        acc[key] = typeof value === 'object' ? JSON.stringify(value) : value;
+        return acc;
+      }, {});
+    }
 
     return (
       <SEOCheckWidget
         title={title}
         icon={icon}
-        extraData={{ [title]: value }}
-        content={content}
-        analysis={analysisText}
-        improvement={improvement}
-        rating={rating}
+        extraData={extraData}
+        content={data.content}
+        analysis={data.analysis}
+        improvement={data.improvement}
+        rating={data.rating}
+        isLoading={isLoading}
       />
     );
   };
@@ -208,7 +337,7 @@ export default function AiSeoCheckerForm() {
           </div>
         )}
 
-        {step === 1 && analysis && (
+        {step === 1 && initialData && (
           <motion.div
             key="analysis"
             initial={{ opacity: 0, y: 50 }}
@@ -219,19 +348,6 @@ export default function AiSeoCheckerForm() {
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
               Hallo {name}, hier is uw SEO-analyse:
             </h3>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="mb-8 p-6 bg-white rounded-lg shadow-md"
-            >
-              <h4 className="text-xl font-semibold mb-2">Algemene SEO Score</h4>
-              <div className="flex items-center">
-                <div className="text-4xl font-bold mr-2">{analysis.overallScore}/10</div>
-                {getRatingIcon(analysis.overallScore)}
-              </div>
-            </motion.div>
 
             {renderAnalysisSection(
               "Laadtijd van de Pagina",
@@ -279,28 +395,6 @@ export default function AiSeoCheckerForm() {
               "Afstemming op Bedrijf en Doelgroep",
               <FaBuilding className="text-indigo-500" />,
               "businessAndAudience"
-            )}
-
-            {analysis.additionalRecommendations && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="bg-white p-6 rounded-lg shadow mt-8"
-              >
-                <h4 className="text-lg font-bold mb-4">Aanvullende Aanbevelingen:</h4>
-                {Array.isArray(analysis.additionalRecommendations) ? (
-                  <ul className="list-disc pl-5">
-                    {analysis.additionalRecommendations.map((recommendation, index) => (
-                      <li key={index} className="mb-2">
-                        {recommendation}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="mb-2">{analysis.additionalRecommendations}</p>
-                )}
-              </motion.div>
             )}
 
             <motion.div
