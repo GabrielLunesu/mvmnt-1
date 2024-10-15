@@ -140,7 +140,7 @@ Inhoud (eerste 1000 tekens): ${bodyText.substring(0, 1000)}...
           { role: 'system', content: 'Je bent een SEO-expert. Analyseer de gegeven inhoud en geef gedetailleerde SEO-aanbevelingen in het gevraagde JSON-formaat. Alle output moet in het Nederlands zijn. Geef alleen de JSON terug zonder extra opmaak of codeblokken.' },
           { role: 'user', content: prompt },
         ],
-        max_tokens: 2000,
+        max_tokens: 1500,
       });
     } catch (openAiError) {
       console.error('OpenAI API Error:', openAiError);
