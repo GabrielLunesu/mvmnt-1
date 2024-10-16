@@ -7,96 +7,83 @@ export default function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Confiance Visuals",
+    link: "https://www.confiancevisuals.nl/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "https://i.ibb.co/P9tLLDx/Screenshot-2024-10-16-at-22-45-57.png",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "Airbro's Parties",
+    link: "https://airbros.nl/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "https://i.ibb.co/r7hqCx9/Screenshot-2024-10-16-at-22-49-23.png",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "Lunesu",
+    link: "https://Lunesu.nl/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      "https://i.ibb.co/99VGJfF/Screenshot-2024-10-16-at-22-52-57.png",
+  },
+  {
+    title: "TROA Makelaardij",
+    link: "https://troa.nl/",
+    thumbnail:
+      "https://i.ibb.co/8mP1qbz/Screenshot-2024-10-16-at-22-54-02.png",
+  },
+  {
+    title: "Heki Made",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
+  },
+  {
+    title: "Synchronique Agency",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
+  },
+  {
+    title: "Thuistekoop",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/LPyMJ4J/Screenshot-2024-10-16-at-23-04-16.png",
+  },
+  // vanaf hier moet je nieuwe toevoegen
+  {
+    title: "TROA Makelaardij",
+    link: "https://troa.nl/",
+    thumbnail:
+      "https://i.ibb.co/8mP1qbz/Screenshot-2024-10-16-at-22-54-02.png",
+  },
+  {
+    title: "Heki Made",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
+  },
+  {
+    title: "Synchronique Agency",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
+  },
+  {
+    title: "Thuistekoop",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/LPyMJ4J/Screenshot-2024-10-16-at-23-04-16.png",
+  },
+  {
+    title: "TROA Makelaardij",
+    link: "https://troa.nl/",
+    thumbnail:
+      "https://i.ibb.co/8mP1qbz/Screenshot-2024-10-16-at-22-54-02.png",
+  },
+  {
+    title: "Heki Made",
+    link: "https://hekimade.com/",
+    thumbnail:
+      "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
   },
 
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
 ];
