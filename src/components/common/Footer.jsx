@@ -20,7 +20,7 @@ export default function Footer() {
                   </ul>
                   <ul className="text-lg flex items-center justify-center flex-col gap-7 py-16 mb-10">
                     <li><a href="#" class="text-white hover:text-white">Algemene Voorwaarden</a></li>
-                    <li><a href="#" class="text-white hover:text-white">Privacy Policy</a></li>
+                    <li><a href="/privacy-policy" class="text-white hover:text-white">Privacy Policy</a></li>
                     <li><a href="/blog" class="text-white hover:text-white">Blog</a></li>
                   </ul>
                   <div class="flex space-x-10 justify-center items-center mb-14">
