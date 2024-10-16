@@ -6,12 +6,13 @@ import Pricing from '@/components/home/Pricing';
 import CTA from '@/components/home/CTA';
 import SeoCheck from '@/components/home/SeoCheck';
 import HeroNew from '@/components/home/Hero-new';
-
+import HeroParallax from '@/components/common/HeroParallax';
 export default function Home() {
   return (
     <>
       {/* <Hero /> */}
-      <HeroNew />
+      <HeroParallax />
+      {/* <HeroNew /> */}
       {/* <Testimonials /> */}
       <Testimonials />
       

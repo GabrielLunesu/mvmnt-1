@@ -32,6 +32,62 @@ const steps = [
   }
 ];
 
+const svgAnimations = [
+  // Kennismaking & Strategie
+  <svg key="strategy" className="w-full h-full" viewBox="0 0 100 100">
+    <motion.circle
+      cx="50" cy="50" r="40"
+      stroke="#4C1D95" strokeWidth="4" fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ duration: 2, repeat: Infinity }}
+    />
+    <motion.path
+      d="M30 50 L45 65 L70 40"
+      stroke="#EC4899" strokeWidth="4" fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+    />
+  </svg>,
+  
+  // Ontwikkeling & Design
+  <svg key="development" className="w-full h-full" viewBox="0 0 100 100">
+    <motion.rect
+      x="20" y="20" width="60" height="60"
+      stroke="#4C1D95" strokeWidth="4" fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ duration: 2, repeat: Infinity }}
+    />
+    <motion.circle
+      cx="50" cy="50" r="20"
+      stroke="#EC4899" strokeWidth="4" fill="none"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
+    />
+  </svg>,
+  
+  // Lancering & Ondersteuning
+  <svg key="launch" className="w-full h-full" viewBox="0 0 100 100">
+    <motion.path
+      d="M20 80 Q50 20 80 80"
+      stroke="#4C1D95" strokeWidth="4" fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ duration: 2, repeat: Infinity }}
+    />
+    <motion.polygon
+      points="50,20 40,40 60,40"
+      fill="#EC4899"
+      initial={{ y: 80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1.5, delay: 0.5, repeat: Infinity, repeatType: "reverse" }}
+    />
+  </svg>
+];
+
 export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -89,9 +145,9 @@ export default function HowItWorks() {
                 </div>
                 <div className="w-full md:w-1/2">
                   <div className="bg-gray-100 rounded-xl p-4 md:p-6">
-                    <h4 className="text-lg md:text-xl font-semibold mb-4">Step {activeStep + 1} Preview</h4>
+                    <h4 className="text-lg md:text-xl font-semibold mb-4">Stap {activeStep + 1} Visualisatie</h4>
                     <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                      <span className="text-gray-500 text-sm md:text-base">Step {activeStep + 1} Visual</span>
+                      {svgAnimations[activeStep]}
                     </div>
                   </div>
                 </div>
