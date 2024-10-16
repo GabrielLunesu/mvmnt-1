@@ -161,9 +161,9 @@ export default function Hero() {
                         <div className="mb-12 text-center">
                             <Link href="/contact" className="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full">
                                 <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full"></div>
-                                <div className="relative z-50 flex items-center py-2 px-4 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200">
+                                <Link href="/contact" className="relative z-50 flex items-center py-2 px-4 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200">
                                     <p className="text-pinkSecondary-900">Contact</p>
-                                </div>
+                                </Link>
                             </Link>
                         </div>
                         <MacbookScroll src="https://placehold.co/1920x1080" />
