@@ -10,54 +10,63 @@ import { motion } from "framer-motion"
 import { Zap, Globe, Rocket } from "lucide-react"
 
 const SEOCard = ({ title, icon: Icon, color }) => (
-    <Card className={`w-64 h-64 ${color} overflow-hidden`}>
-        <CardContent className="flex flex-col items-center justify-center h-full text-white relative">
+    <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={`w-64 h-64 ${color} rounded-xl overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl`}
+    >
+        <div className="flex flex-col items-center justify-center h-full text-white relative p-6">
             <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-2xl font-bold mb-2"
+                className="text-2xl font-bold mb-4 text-center"
             >
                 {title}
             </motion.div>
             <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ 
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: 0.2
+                }}
+                className="mb-4"
             >
-                <Icon size={48} />
+                <Icon size={64} strokeWidth={1.5} />
             </motion.div>
             <motion.div
                 className="absolute inset-0 pointer-events-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
             >
-                {[...Array(5)].map((_, index) => (
+                {[...Array(10)].map((_, index) => (
                     <motion.div
                         key={index}
                         className="absolute bg-white rounded-full"
                         style={{
-                            width: Math.random() * 10 + 5,
-                            height: Math.random() * 10 + 5,
+                            width: Math.random() * 4 + 2,
+                            height: Math.random() * 4 + 2,
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
                         }}
-                        initial={{ scale: 0, opacity: 0 }}
                         animate={{
                             scale: [0, 1, 0],
                             opacity: [0, 1, 0],
                         }}
                         transition={{
-                            duration: 2,
+                            duration: 2 + Math.random() * 2,
                             repeat: Infinity,
                             delay: Math.random() * 2,
                         }}
                     />
                 ))}
             </motion.div>
-        </CardContent>
-    </Card>
+        </div>
+    </motion.div>
 )
 
 export default function Hero() {
@@ -221,9 +230,9 @@ export default function Hero() {
                             </Link>
                         </div>
                         <div className="flex justify-center gap-8 flex-wrap">
-                            <SEOCard title="SEO Optimized" icon={Zap} color="bg-green-500" />
-                            <SEOCard title="Global Reach" icon={Globe} color="bg-blue-500" />
-                            <SEOCard title="Fast Growth" icon={Rocket} color="bg-purple-500" />
+                            <SEOCard title="SEO Optimalisatie" icon={Zap} color="bg-gradient-to-br from-green-400 to-green-600" />
+                            <SEOCard title="Groter Publiek" icon={Globe} color="bg-gradient-to-br from-blue-400 to-blue-600" />
+                            <SEOCard title="Snelle Groei" icon={Rocket} color="bg-gradient-to-br from-purple-400 to-purple-600" />
                         </div>
                     </div>
                 </div>
