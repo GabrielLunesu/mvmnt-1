@@ -64,7 +64,7 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold text-white">
         MVMNT <br /> maakt meer dan alleen websites
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-white">
       Je partner in digitale groei. Wij creëren niet zomaar websites, maar bouwen complete online fundamenten voor ondernemers. Met onze betaalbare, SEO-geoptimaliseerde oplossingen zet je je bedrijf stevig op de digitale kaart.
       </p>
     </div>)
