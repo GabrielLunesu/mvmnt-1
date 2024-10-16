@@ -137,14 +137,14 @@ export default function Hero() {
             <div className="container mx-auto px-4">
                 <div className="relative pb-14">
                     <Image
-                        className="hidden lg:block absolute left-16 xl:left-36 2xl:left-56 3xl:left-96 top-96"
+                        className="hidden lg:block absolute left-16 xl:left-36 2xl:left-56 3xl:left-96 top-56"
                         src={StarsPattern1}
                         alt="Stars pattern 1"
                         width={76}
                         height={132}
                     />
                     <Image
-                        className="hidden lg:block absolute right-4 xl:right-36 2xl:right-56 3xl:right-96 top-96"
+                        className="hidden lg:block absolute right-4 xl:right-36 2xl:right-56 3xl:right-96 top-56"
                         src={StarsPattern2}
                         alt="Stars pattern 2"
                         width={76}

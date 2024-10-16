@@ -7,7 +7,7 @@ export default function Testimonials() {
   return (
     <div className="py-6 bg-white">
       <div className=" mx-auto px-4 ">
-        <h2 className="text-3xl font-bold text-center mb-12 text-purple-900">What our customers are saying</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-purple-900">Wat zeggen onze klanten?</h2>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-16">
             <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
