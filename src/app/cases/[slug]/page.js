@@ -14,47 +14,74 @@ const fadeInUp = {
     transition: { duration: 0.6 }
 };
 
+const titleAnimation = {
+    initial: { opacity: 0, y: -50 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, type: "spring", stiffness: 100 }
+};
+
+const CTA = () => (
+    <motion.div 
+        {...fadeInUp} 
+        className="bg-transparent text-white py-16 px-4 text-center"
+    >
+        <h2 className="text-3xl font-bold mb-4">Klaar om uw project te starten?</h2>
+        <p className="text-xl mb-8">Laten we samenwerken om uw visie werkelijkheid te maken.</p>
+        <Link href="/contact" className="bg-white text-purple-700 py-3 px-8 rounded-full font-semibold text-lg hover:bg-purple-100 transition-colors duration-300">
+            Neem contact op
+        </Link>
+    </motion.div>
+);
+
 export default function CaseStudy({ params }) {
     const { data: caseStudy, error } = useSWR(`/api/case-studies/${params.slug}`, fetcher);
 
-    if (error) return <div className="container mx-auto px-4 py-16 text-center">Failed to load case study</div>;
-    if (!caseStudy) return <div className="container mx-auto px-4 py-16 text-center">Loading...</div>;
+    if (error) return <div className="container mx-auto px-4 py-16 text-center text-white">Failed to load case study</div>;
+    if (!caseStudy) return <div className="container mx-auto px-4 py-16 text-center text-white">Loading...</div>;
 
     return (
-        <div className="bg-purple-900 min-h-screen">
-            <div className="container mx-auto px-4 py-16 max-w-4xl">
-                <motion.div {...fadeInUp} className="mb-8">
-                    <Link href="/cases" className="inline-flex mt-12 items-center text-purple-600 hover:text-purple-800 transition-colors">
+        <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-purple-900 min-h-screen text-white">
+            <div className="container mx-auto px-4 py-24 max-w-4xl">
+                <motion.div {...fadeInUp} className="mb-12">
+                    <Link href="/cases" className="inline-flex items-center text-purple-200 hover:text-white transition-colors">
                         <ArrowLeft className="mr-2" size={20} />
-                        <span>Back to all cases</span>
+                        <span>Terug naar alle cases</span>
                     </Link>
                 </motion.div>
 
-                <motion.h1 {...fadeInUp} className="text-4xl font-bold mb-8 text-center">{caseStudy.title}</motion.h1>
+                <motion.h1 
+                    {...titleAnimation} 
+                    className="text-6xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-pink-300"
+                >
+                    {caseStudy.title}
+                </motion.h1>
 
-                <motion.div {...fadeInUp} className="mb-12">
+                <motion.div {...fadeInUp} className="mb-16 relative aspect-video">
                     <Image 
                         src={caseStudy.image} 
                         alt={caseStudy.title} 
-                        width={800} 
-                        height={600} 
-                        className="w-full h-96 object-cover rounded-lg shadow-lg"
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg shadow-2xl"
                     />
                 </motion.div>
 
-                <motion.p {...fadeInUp} className="text-gray-700 mb-12 text-lg leading-relaxed">{caseStudy.description}</motion.p>
+                <motion.p {...fadeInUp} className="text-purple-100 mb-16 text-xl leading-relaxed">
+                    {caseStudy.description}
+                </motion.p>
 
                 {caseStudy.sections?.map((section, index) => (
                     <motion.div 
                         key={index}
                         {...fadeInUp} 
-                        className="bg-white rounded-lg shadow-md p-8 mb-12 last:mb-0"
+                        className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-xl p-8 mb-12 last:mb-0"
                     >
-                        <h2 className="text-2xl font-semibold mb-4 text-purple-600">{section.title}</h2>
-                        <p className="text-gray-700">{section.content}</p>
+                        <h2 className="text-3xl font-semibold mb-6 text-purple-200">{section.title}</h2>
+                        <p className="text-purple-50 text-lg leading-relaxed">{section.content}</p>
                     </motion.div>
                 ))}
             </div>
+            <CTA />
         </div>
     );
 }
