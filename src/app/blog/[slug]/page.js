@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import CTA from '@/components/blog/CTA';
+import { TracingBeam } from '@/components/ui/tracing-beam';
+
 export default async function BlogPost({ params }) {
     try {
         const page = await fetchBySlug(params.slug);
@@ -58,26 +60,27 @@ export default async function BlogPost({ params }) {
                     </div>
                 </header>
 
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="mb-8 text-center">
-                        <p className="text-gray-500">
-                            {formatDate(date)} • By {author}
-                        </p>
-                    </div>
+                <TracingBeam className="px-4">
+                    <div className="max-w-3xl mx-auto sm:px-6 lg:px-8">
+                        <div className="mb-8 text-center">
+                            <p className="text-gray-500">
+                                {formatDate(date)} • By {author}
+                            </p>
+                        </div>
 
-                    <div className="prose prose-xl w-full max-w-3xl mx-auto">
-                        <div dangerouslySetInnerHTML={{ __html: html }}></div>
-                    </div>
+                        <div className="prose prose-xl w-full max-w-3xl mx-auto">
+                            <div dangerouslySetInnerHTML={{ __html: html }}></div>
+                        </div>
 
-                    <div className="mt-16 mb-8 text-xl text-center">
-                        <Link href="/blog" className="text-purple-600 hover:text-purple-500 transition-colors">
-                            ← Terug naar alle blogs
-                        </Link>
+                        <div className="mt-16 mb-8 text-xl text-center">
+                            <Link href="/blog" className="text-purple-600 hover:text-purple-500 transition-colors">
+                                ← Terug naar alle blogs
+                            </Link>
+                        </div>
                     </div>
-                </div>
-            <CTA />
+                </TracingBeam>
+                <CTA />
             </article>
-           
         );
     } catch (error) {
         console.error('Error rendering page:', error);
