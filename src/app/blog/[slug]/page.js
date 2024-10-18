@@ -65,12 +65,12 @@ export default async function BlogPost({ params }) {
                         </p>
                     </div>
 
-                    <div className="prose prose-lg mx-auto">
+                    <div className="prose prose-xl w-full max-w-3xl mx-auto">
                         <div dangerouslySetInnerHTML={{ __html: html }}></div>
                     </div>
 
-                    <div className="mt-16 mb-8 text-center">
-                        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    <div className="mt-16 mb-8 text-xl text-center">
+                        <Link href="/blog" className="text-purple-600 hover:text-purple-500 transition-colors">
                             ← Terug naar alle blogs
                         </Link>
                     </div>

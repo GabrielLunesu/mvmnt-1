@@ -6,7 +6,7 @@ export default function CTA() {
     <section className="min-h-screen bg-gradient-to-b from-white via-purple-600 to-purple-900 py-20">
       <div className="max-w-4xl mx-auto px-4">
         <div className="bg-gradient-to-t from-purple-300 via-pink-700 to-purple-900 rounded-3xl relative p-10" style={{maxWidth: '470px', margin: '0 auto'}}>
-          <div className="bg-white rounded-2xl p-16 text-center">
+          <div className="bg-white rounded-2xl p-12 text-center">
             <h2 className="text-2xl font-bold text-purple-900 mb-4">
               Klaar om je bedrijf naar het volgende niveau te tillen?
             </h2>
