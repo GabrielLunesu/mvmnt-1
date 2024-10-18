@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import Link from 'next/link';   
 
 export default function Pricing() {
     const [isMonthly, setIsMonthly] = useState(true);
@@ -116,9 +117,11 @@ function PricingCard({ title, price, period, description, features, highlighted 
                     </li>
                 ))}
             </ul>
-            <button className={`w-full py-2 rounded-full font-semibold ${buttonClass} mt-auto`}>
-                Get Started
+            <Link href="/contact">
+            <button href="/contact" className={`w-full py-2 rounded-full font-semibold ${buttonClass} mt-auto`}>
+                Nu starten
             </button>
+            </Link>
         </div>
     );
 }
