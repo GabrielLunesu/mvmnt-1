@@ -5,8 +5,6 @@ export const notion = new Client({
 });
 
 export async function fetchPages() {
-    // Add a timestamp to force a new request each time
-    const timestamp = new Date().getTime();
     return notion.databases.query({
         database_id: process.env.NOTION_DATABASE_ID,
         filter: {
@@ -15,8 +13,7 @@ export async function fetchPages() {
                 equals: 'Live',
             }
         },
-        // Add a dummy parameter to bypass caching
-        start_cursor: timestamp.toString()
+        // Remove the start_cursor parameter
     });
 }
 

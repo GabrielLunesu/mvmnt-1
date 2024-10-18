@@ -1,5 +1,3 @@
-'use client';
-
 import React from "react";
 import BlogList from "@/components/blog/BlogList";
 import { Hero } from "@/components/blog/Hero";

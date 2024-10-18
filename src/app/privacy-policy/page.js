@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Privacyverklaring MVMNT</h1>
           
           <p className="mb-4">
-            Dit document bevat informatie over welke persoonsgegevens MVMNT van je verwerkt en waarom. Onder "de overeenkomst" wordt in deze privacyverklaring verstaan de overeenkomst tussen jou en MVMNT betreffende de dienstverlening van MVMNT.
+            Dit document bevat informatie over welke persoonsgegevens MVMNT van je verwerkt en waarom. Onder &quot;de overeenkomst&quot; wordt in deze privacyverklaring verstaan de overeenkomst tussen jou en MVMNT betreffende de dienstverlening van MVMNT.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Bedrijfsgegevens MVMNT</h2>
