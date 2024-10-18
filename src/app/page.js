@@ -11,9 +11,11 @@ export default function Home() {
   return (
     <>
       {/* <Hero /> */}
-      <HeroParallax />
+     
       {/* <HeroNew /> */}
       {/* <Testimonials /> */}
+      
+      <HeroParallax />
       <Testimonials />
       
       <HowItWorks />
