@@ -61,14 +61,14 @@ export default async function BlogPost({ params }) {
                 </header>
 
                 <TracingBeam className="px-4">
-                    <div className="max-w-3xl mx-auto sm:px-6 lg:px-8">
+                    <div className="max-w-3xl mx-auto px-8 sm:px-6 lg:px-8">
                         <div className="mb-8 text-center">
                             <p className="text-gray-500">
                                 {formatDate(date)} • By {author}
                             </p>
                         </div>
 
-                        <div className="prose prose-xl w-full max-w-3xl mx-auto">
+                        <div className="prose prose-xl w-full max-w-2xl mx-auto">
                             <div dangerouslySetInnerHTML={{ __html: html }}></div>
                         </div>
 
