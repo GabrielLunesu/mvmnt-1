@@ -1,3 +1,5 @@
 not all images are in the hero parallax and some are duplicate! -done
 
-tracing beam is not responsive in mobile in blog page
+tracing beam is not responsive in mobile in blog page -done
+
+
