@@ -8,6 +8,24 @@ import { formatDate } from '@/lib/utils';
 import CTA from '@/components/blog/CTA';
 import { TracingBeam } from '@/components/ui/tracing-beam';
 
+export async function generateMetadata({ params }) {
+  const page = await fetchBySlug(params.slug);
+  const title = page.properties.Title.title[0]?.plain_text || 'Untitled';
+  const description = page.properties.Description?.rich_text[0]?.plain_text || '';
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime: page.created_time,
+      authors: [page.properties.Author?.rich_text[0]?.plain_text || 'Anonymous'],
+    },
+  };
+}
+
 export default async function BlogPost({ params }) {
     try {
         const page = await fetchBySlug(params.slug);
