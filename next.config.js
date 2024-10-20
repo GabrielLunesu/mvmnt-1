@@ -8,6 +8,10 @@ const nextConfig = {
       source: '/sitemap.xml',
       destination: '/api/sitemap',
     },
+    {
+      source: '/3f7b8f9e1d2c5a6b4e0d8c7a9f1b3e5d.txt',
+      destination: '/api/indexnow',
+    },
   ],
 }
 

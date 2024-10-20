@@ -8,6 +8,7 @@ import { formatDate } from '@/lib/utils';
 import CTA from '@/components/blog/CTA';
 import { TracingBeam } from '@/components/ui/tracing-beam';
 import { generateMetadata as baseGenerateMetadata } from '../../metadata';
+import { JsonLd } from "react-schemaorg";
 
 export async function generateMetadata({ params }) {
   const page = await fetchBySlug(params.slug);
@@ -64,6 +65,20 @@ export default async function BlogPost({ params }) {
 
         return (
             <article className="bg-white min-h-screen">
+                <JsonLd
+                    item={{
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        headline: title,
+                        image: coverImage,
+                        author: {
+                            "@type": "Person",
+                            name: author,
+                        },
+                        datePublished: date,
+                        description: '',
+                    }}
+                />
                 <header className="relative h-96 mb-16">
                     <Image 
                         src={coverImage}
