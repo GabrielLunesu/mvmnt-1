@@ -7,23 +7,24 @@ import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import CTA from '@/components/blog/CTA';
 import { TracingBeam } from '@/components/ui/tracing-beam';
+import { generateMetadata as baseGenerateMetadata } from '../../metadata';
 
 export async function generateMetadata({ params }) {
   const page = await fetchBySlug(params.slug);
   const title = page.properties.Title.title[0]?.plain_text || 'Untitled';
   const description = page.properties.Description?.rich_text[0]?.plain_text || '';
+  const coverImage = page.cover?.external?.url || page.cover?.file?.url || null;
 
-  return {
+  return baseGenerateMetadata({
     title,
     description,
+    image: coverImage,
     openGraph: {
-      title,
-      description,
       type: 'article',
       publishedTime: page.created_time,
       authors: [page.properties.Author?.rich_text[0]?.plain_text || 'Anonymous'],
     },
-  };
+  });
 }
 
 export default async function BlogPost({ params }) {
