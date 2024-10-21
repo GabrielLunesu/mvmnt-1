@@ -16,7 +16,7 @@ export default function CTA() {
           Verbeter uw projecten met onze expertise.
         </p>
         <Link href="/contact" className="inline-block mb-8">
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
+          <button className="bg-purple-900 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
             Start Nu
           </button>
         </Link>

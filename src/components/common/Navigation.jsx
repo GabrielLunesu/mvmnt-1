@@ -28,7 +28,7 @@ export default function Navigation() {
                         <div className="flex items-center justify-center">
                             <div className="flex gap-0.5 p-0.5 rounded-full bg-white bg-opacity-10 backdrop-blur-lg">
                                 <Link href="/" className="flex-shrink-0">
-                                    <Image src="https://i.ibb.co/HhfN9hq/mv-1.png" alt="Vista Logo" width={35} height={35} />
+                                    <Image src="https://i.ibb.co/HhfN9hq/mv-1.png" alt="MVMNT Logo" width={35} height={35} />
                                 </Link>
                                 <NavLink href="/"><FaHome className='h-5 w-5' /></NavLink>
                                 <NavLink href="/cases">Cases</NavLink>
