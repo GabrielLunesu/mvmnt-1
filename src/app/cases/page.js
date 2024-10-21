@@ -3,53 +3,66 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { caseStudies } from '@/data/caseStudies';
-import { Hero } from '@/components/cases/Hero';
+import CasesHero from '@/components/cases/CasesHero';
 
-const CaseStudy = ({ caseData, index }) => {
-    return (
-      <div className="h-screen w-full relative overflow-hidden snap-start bg-gradient-to-b from-purple-900 via-purple-800 to-purple-900 flex items-center justify-center">
-        <div className="max-w-6xl w-full mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2 text-white">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">{caseData.title}</h2>
-            <p className="text-lg md:text-xl mb-6">{caseData.description}</p>
-            <Link href={`/cases/${caseData.slug}`} className="inline-block bg-white text-purple-600 py-2 px-6 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all">
-              Verder lezen
-            </Link>
-          </div>
-          <div className="w-full md:w-1/2">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative aspect-video">
-                <Image 
-                  src={caseData.image} 
-                  alt={caseData.title}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                  quality={100}
-                />
-              </div>
-            </div>
-          </div>
+const CaseStudyWidget = ({ caseData, index }) => {
+  const isEven = index % 2 === 0;
+  return (
+    <div className={`flex flex-col lg:flex-row items-center gap-8 mb-16 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+      <div className="w-2/3 mx-auto lg:w-1/2">
+        <div className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={caseData.image} 
+            alt={caseData.title}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            quality={100}
+          />
         </div>
       </div>
-    );
-  };
-  
-  const CaseStudyPage = () => {
-    return (
-      <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-        <div className="h-screen bg-purple-900 flex items-center justify-center snap-start">
-          <Hero />
+      <div className="w-2/3 mx-auto lg:w-1/2 text-black">
+        <h3 className="text-2xl font-bold mb-3">{caseData.title}</h3>
+        <p className="text-gray-700 mb-4">{caseData.description}</p>
+        <div className="flex gap-2 mb-4">
+          {caseData.technologies && caseData.technologies.map((tech, index) => (
+            <Image 
+              key={index}
+              src={`/icons/${tech}.svg`}
+              alt={tech}
+              width={24}
+              height={24}
+            />
+          ))}
         </div>
+        {caseData.url && (
+          <Link href={caseData.url} className="text-blue-600 hover:text-blue-800 transition-colors" target="_blank" rel="noopener noreferrer">
+            {caseData.url} ↗
+          </Link>
+        )}
+        <Link href={`/cases/${caseData.slug}`} className="inline-block bg-purple-600 text-white py-2 px-4 rounded text-sm font-semibold hover:bg-purple-700 transition-all mt-4">
+          Bekijk Case →
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const CaseStudyPage = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <CasesHero />
+      <div className="container mx-auto md:px-24 py-16">
         {caseStudies.map((caseItem, index) => (
-          <CaseStudy 
+          <CaseStudyWidget 
             key={caseItem.id}
-            caseData={caseItem} 
+            caseData={caseItem}
             index={index}
           />
         ))}
       </div>
-    );
-  };
-  
-  export default CaseStudyPage;
+    </div>
+  );
+};
+
+export default CaseStudyPage;

@@ -20,7 +20,7 @@ export default function CTA() {
             Start Nu
           </button>
         </Link>
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <div className="flex -space-x-2 mr-4">
             <Image src="https://placehold.co/60x60" alt="Avatar 1" width={40} height={40} className="rounded-full border-2 border-white" />
             <Image src="https://placehold.co/60x60" alt="Avatar 2" width={40} height={40} className="rounded-full border-2 border-white" />
@@ -29,7 +29,7 @@ export default function CTA() {
           <p className="text-gray-600">
             Sluit je aan bij andere ondernemers
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
