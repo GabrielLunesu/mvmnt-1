@@ -9,7 +9,7 @@ export default function HowItWorks() {
               <span className="text-purple-900 font-bold">Hoe werkt het?</span>
               <h2 className="text-4xl lg:text-5xl font-bold font-heading">Bouw & lanceer zoals jij dat wilt.</h2>
             </div>
-            <div className="flex flex-wrap mx-12">
+            <div className="flex flex-wrap mx-4">
               <StepCard
                 number="1"
                 title="Concept & Strategie"

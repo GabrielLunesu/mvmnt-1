@@ -3,3 +3,4 @@ not all images are in the hero parallax and some are duplicate! -done
 tracing beam is not responsive in mobile in blog page -done
 
 
+index now is working, check if pages are getting indexed, init 20 oct 
