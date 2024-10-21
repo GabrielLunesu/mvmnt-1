@@ -4,6 +4,9 @@ import Pricing from '@/components/home/Pricing';
 import CTA from '@/components/home/CTA';
 import SeoCheck from '@/components/home/SeoCheck';
 import HeroParallax from '@/components/common/HeroParallax';
+import CalendlyCTA from '@/components/calendly/CalendlyCTA';
+
+
 export default function Home() {
   return (
     <>
@@ -18,7 +21,7 @@ export default function Home() {
       <HowItWorks />
       <SeoCheck />
       <Pricing />
-      <CTA />
+      <CalendlyCTA />
     </>
   );
 }
