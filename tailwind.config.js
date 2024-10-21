@@ -146,6 +146,9 @@ module.exports = {
         'falling-star-3': 'fallAndFade 5s ease-in-out 3.33s infinite',
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        fadeIn: 'fadeIn 1s ease-out',
+        slideDown: 'slideDown 0.5s ease-out',
+        slideUp: 'slideUp 0.5s ease-out',
       },
       keyframes: {
         scroll: {
@@ -161,7 +164,19 @@ module.exports = {
           '0%': { opacity: 0, transform: 'translateY(-100%) scale(0.5)' },
           '50%': { opacity: 1, transform: 'translateY(0) scale(1)' },
           '100%': { opacity: 0, transform: 'translateY(100%) scale(0.5)' },
-        }
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
       backgroundColor: {
         'darkPink-900': '#1a0a14', // Adjust this color to match your design
