@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import CalendlyEmbed from '../calendly/CalendlyEmbed';
+import Link from 'next/link';
 
 export default function ContactPage() {
     const calendlyUrl = "https://calendly.com/mvmnt-info/strategie-sessie-mvmnt?background_color=000000&text_color=ffffff&primary_color=ffffff&lang=nl";
