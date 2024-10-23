@@ -15,7 +15,7 @@ const About = () => {
         <HowItWorks />        
         <Testimonials />
         <Faq />
-        <Team />
+        {/* <Team /> */}
         <CTA />
        
         

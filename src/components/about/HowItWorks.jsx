@@ -18,74 +18,15 @@ const steps = [
   {
     title: "Kennismaking & Strategie",
     description: "We starten met een vrijblijvend gesprek om jouw doelen en wensen in kaart te brengen. Op basis daarvan creëren we een gepersonaliseerde strategie voor jouw website.",
-    icon: "/design-icon.svg"
   },
   {
     title: "Ontwikkeling & Design",
     description: "Onze experts gaan aan de slag met het ontwerpen en bouwen van een website die niet alleen esthetisch sterk is, maar ook gebruiksvriendelijk en SEO-geoptimaliseerd.",
-    icon: "/development-icon.svg"
   },
   {
     title: "Lancering & Ondersteuning",
     description: "Zodra je website klaar is, zorgen we voor een vlekkeloze lancering en bieden we doorlopende ondersteuning en updates, zodat je site altijd optimaal presteert.",
-    icon: "/launch-icon.svg"
   }
-];
-
-const svgAnimations = [
-  // Kennismaking & Strategie
-  <svg key="strategy" className="w-full h-full" viewBox="0 0 100 100">
-    <motion.circle
-      cx="50" cy="50" r="40"
-      stroke="#4C1D95" strokeWidth="4" fill="none"
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{ duration: 2, repeat: Infinity }}
-    />
-    <motion.path
-      d="M30 50 L45 65 L70 40"
-      stroke="#EC4899" strokeWidth="4" fill="none"
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{ duration: 1.5, delay: 0.5 }}
-    />
-  </svg>,
-  
-  // Ontwikkeling & Design
-  <svg key="development" className="w-full h-full" viewBox="0 0 100 100">
-    <motion.rect
-      x="20" y="20" width="60" height="60"
-      stroke="#4C1D95" strokeWidth="4" fill="none"
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{ duration: 2, repeat: Infinity }}
-    />
-    <motion.circle
-      cx="50" cy="50" r="20"
-      stroke="#EC4899" strokeWidth="4" fill="none"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ duration: 1, delay: 0.5 }}
-    />
-  </svg>,
-  
-  // Lancering & Ondersteuning
-  <svg key="launch" className="w-full h-full" viewBox="0 0 100 100">
-    <motion.path
-      d="M20 80 Q50 20 80 80"
-      stroke="#4C1D95" strokeWidth="4" fill="none"
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{ duration: 2, repeat: Infinity }}
-    />
-    <motion.polygon
-      points="50,20 40,40 60,40"
-      fill="#EC4899"
-      initial={{ y: 80 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 1.5, delay: 0.5, repeat: Infinity, repeatType: "reverse" }}
-    />
-  </svg>
 ];
 
 export default function HowItWorks() {
@@ -131,26 +72,11 @@ export default function HowItWorks() {
               transition={{ duration: 0.5 }}
               className="bg-purple-900 mx-0 md:mx-20 lg:mx-40 rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg"
             >
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-1/2 mb-6 md:mb-0">
-                  <div className="flex items-center mb-4">
-                    {/* <div className="bg-pink-100 rounded-full p-2 md:p-3 mr-4">
-                      <Image src={steps[activeStep].icon} alt={steps[activeStep].title} width={24} height={24} />
-                    </div> */}
-                    <h3 className="text-xl md:text-2xl font-bold text-white">{steps[activeStep].title}</h3>
-                  </div>
-                  <p className="text-white text-sm md:text-base mb-6">
-                    {steps[activeStep].description}
-                  </p>
-                </div>
-                <div className="w-full md:w-1/2">
-                  <div className="bg-gray-100 rounded-xl p-4 md:p-6">
-                    <h4 className="text-lg md:text-xl font-semibold mb-4">Stap {activeStep + 1} Visualisatie</h4>
-                    <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                      {svgAnimations[activeStep]}
-                    </div>
-                  </div>
-                </div>
+              <div className="flex flex-col items-center text-center">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">{steps[activeStep].title}</h3>
+                <p className="text-white text-sm md:text-base max-w-2xl">
+                  {steps[activeStep].description}
+                </p>
               </div>
             </motion.div>
           </AnimatePresence>

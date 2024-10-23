@@ -20,7 +20,7 @@ export default function Footer() {
               <li><Link href="/contact" className="text-gray-200 hover:text-gray-200">Contact</Link></li>
             </ul>
             {/* White line separator */}
-            <div className="w-full items-center justify-center mx-auto border-t w-[20rem] border-white my-4"></div>
+            <div className=" items-center justify-center mx-auto border-t w-[20rem] border-white my-4"></div>
             <ul className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
               <li><Link href="/privacy-policy" className="text-gray-200 hover:text-gray-200">Privacy Policy</Link></li>
               <li><Link href="/algemene-voorwaarden" className="text-gray-200 hover:text-gray-200">Algemene Voorwaarden</Link></li>
