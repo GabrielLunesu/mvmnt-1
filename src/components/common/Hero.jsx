@@ -166,7 +166,7 @@ export default function Hero() {
                                 </Link>
                             </Link>
                         </div>
-                        <MacbookScroll src="https://placehold.co/1920x1080" />
+                        <MacbookScroll src="https://i.ibb.co/hdkJD77/Untitled-design-1-1.jpg" />
                     </div>
                 </div>
             </div>

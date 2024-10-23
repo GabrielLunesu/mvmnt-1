@@ -92,9 +92,9 @@ const PrivacyPolicy = () => {
           </p>
 
           <ul className="list-disc pl-6 mb-6">
-            <li><a href="https://nl-nl.facebook.com/privacy/explanation" className="text-blue-600 hover:underline">Facebook</a></li>
-            <li><a href="https://www.linkedin.com/legal/privacy-policy?_l=nl_NL" className="text-blue-600 hover:underline">LinkedIn</a></li>
-            <li><a href="https://policies.google.com/privacy?hl=nl" className="text-blue-600 hover:underline">Google Analytics</a></li>
+            <li><Link href="https://nl-nl.facebook.com/privacy/explanation" className="text-blue-600 hover:underline">Facebook</Link></li>
+            <li><Link href="https://www.linkedin.com/legal/privacy-policy?_l=nl_NL" className="text-blue-600 hover:underline">LinkedIn</Link></li>
+            <li><Link href="https://policies.google.com/privacy?hl=nl" className="text-blue-600 hover:underline">Google Analytics</Link></li>
           </ul>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Contact</h2>

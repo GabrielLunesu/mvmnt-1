@@ -58,7 +58,7 @@ export const MacbookScroll = ({
       className="xl:min-h-[120vh] -mt-20 -mb-10 flex flex-col items-center py-0 md:py-32 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100 scale-[0.45] xl:scale-[0.85] sm:scale-50"
     >
       <Lid
-        src="https://placehold.co/1920x1080.jpg"
+        src="https://i.ibb.co/hdkJD77/Untitled-design-1-1.jpg"
         scaleX={scaleX}
         scaleY={scaleY}
         rotate={rotate}

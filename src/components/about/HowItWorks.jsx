@@ -70,7 +70,7 @@ export default function HowItWorks() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-purple-900 mx-0 md:mx-20 lg:mx-40 rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg"
+              className="bg-purple-900 w-2/3 md:w-1/3 mx-auto rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg"
             >
               <div className="flex flex-col items-center text-center">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">{steps[activeStep].title}</h3>
