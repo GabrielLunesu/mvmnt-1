@@ -1,53 +1,37 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useSWR from 'swr';
 import BlogCard from './BlogCard';
 
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
 export default function BlogList() {
-  const [pages, setPages] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data: pages, error, isLoading } = useSWR('/api/blog-posts', fetcher, {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    refreshInterval: 21600000, // Refresh every 6 hours (21600000 milliseconds)
+  });
 
-  useEffect(() => {
-    async function fetchPages() {
-      try {
-        const response = await fetch('/api/blog-posts');
-        if (!response.ok) {
-          throw new Error('Failed to fetch blog posts');
-        }
-        const data = await response.json();
-        setPages(data.results);
-        setLoading(false);
-      } catch (err) {
-        console.error("Error in BlogList:", err);
-        setError('Error loading blog posts.');
-        setLoading(false);
-      }
-    }
-
-    fetchPages();
-  }, []);
-
-  if (loading) {
+  if (isLoading) {
     return <div className="text-white text-center py-16">Loading blog posts...</div>;
   }
 
   if (error) {
-    return <div className="text-white text-center py-16">{error}</div>;
+    return <div className="text-white text-center py-16">Error loading blog posts.</div>;
   }
 
-  if (pages.length === 0) {
+  if (!pages || pages.results.length === 0) {
     return <div className="text-white text-center py-16">No blog posts found.</div>;
   }
 
   return (
     <div className="w-full mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {pages.map((page) => (
+        {pages.results.map((page) => (
           <BlogCard key={page.id} page={page} />
         ))}
       </div>
     </div>
   );
 }
-

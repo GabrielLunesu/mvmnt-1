@@ -13,7 +13,12 @@ export async function fetchPages() {
                 equals: 'Live',
             }
         },
-        // Remove the start_cursor parameter
+        sorts: [
+            {
+                property: 'Date',
+                direction: 'descending',
+            },
+        ],
     });
 }
 
