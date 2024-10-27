@@ -73,7 +73,7 @@ export default function Pricing() {
                     <PricingCard
                         title="Limitless"
                         price={isMonthly ? "€500" : "€9000"}
-                        period=" vanaf"
+                        period={isMonthly ? "per maand" : " eenmalig"}
                         description="Onbegrensde mogelijkheden. Een volledig op maat gecodeerde website, exclusief ontwikkeld voor jouw merk. Geen limieten, geen concessies—pure digitale perfectie op het hoogste niveau."
                         features={[
                             "Volledig maatwerk",
