@@ -77,7 +77,7 @@ export default function Pricing() {
                         description="Onbegrensde mogelijkheden. Een volledig op maat gecodeerde website, exclusief ontwikkeld voor jouw merk. Geen limieten, geen concessies—pure digitale perfectie op het hoogste niveau."
                         features={[
                             "Volledig maatwerk",
-                            "eigen projectmanager",
+                            "Eigen projectmanager",
                             "Full stack development webapps + mobiele apps",
                             "Schaalbaarheidsplanning",
                             "Onderhoudssupport op maat",
