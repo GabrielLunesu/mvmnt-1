@@ -39,9 +39,9 @@ export default function Pricing() {
                 <animated.div style={props} className="flex flex-wrap justify-center items-start gap-8">
                     <PricingCard
                         title="Essential Pro"
-                        price={isMonthly ? "€99" : "€1695"}
-                        period={isMonthly ? "/per maand" : " eenmalig"}
-                        description="Meer dan een prachtige website. Essential Pro creërt een converterende online aanwezigheid die zowel visueel indruk maakt als technisch optimaal is. Vindbaar, veilig en schaalbaar—dit pakket verhoogt de lat voor elk bedrijf."
+                        price={isMonthly ? "€100" : "€1700"}
+                        period={isMonthly ? "per maand" : " eenmalig"}
+                        description="Meer dan een prachtige website. Essential Pro creëert een converterende online aanwezigheid die zowel visueel indruk maakt als technisch optimaal is. Vindbaar, veilig en schaalbaar—dit pakket verhoogt de lat voor elk bedrijf."
                         features={[
                             "Custom responsive design (4/8/12 pagina's)",
                             "Basis SEO Installatie",
@@ -55,8 +55,8 @@ export default function Pricing() {
                     />
                     <PricingCard
                         title="Dynamic"
-                        price={isMonthly ? "€250" : "€2495"}
-                        period={isMonthly ? "/per maand" : " eenmalig"}
+                        price={isMonthly ? "€250" : "€2500"}
+                        period={isMonthly ? "per maand" : " eenmalig"}
                         description="Ontworpen voor groei. Dynamic combineert een sterke marketingfocus met geavanceerde SEO-optimalisatie en maatwerkfunctionaliteiten. Dit pakket biedt de tools aan om je concurrenten te overtreffen en jouw bedrijf online te laten excelleren."
                         features={[
                             "Custom responsive design (tot 20 pagina's)",
@@ -72,7 +72,7 @@ export default function Pricing() {
                     />
                     <PricingCard
                         title="Limitless"
-                        price="€9000"
+                        price={isMonthly ? "€500" : "€9000"}
                         period=" vanaf"
                         description="Onbegrensde mogelijkheden. Een volledig op maat gecodeerde website, exclusief ontwikkeld voor jouw merk. Geen limieten, geen concessies—pure digitale perfectie op het hoogste niveau."
                         features={[
