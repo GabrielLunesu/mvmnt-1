@@ -7,3 +7,5 @@ index now is working, check if pages are getting indexed, init 20 oct
 
 
 link the socials in the footer to the actual social media pages
+
+make the seo page
