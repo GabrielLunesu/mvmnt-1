@@ -66,10 +66,10 @@ export const Header = () => {
     <div
       className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold text-white">
-        MVMNT <br /> maakt meer dan alleen websites
+       <b>Meer</b> dan een website,<br/> jou idee, onze creatie.
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-white">
-      Je partner in digitale groei. Wij creëren niet zomaar websites, maar bouwen complete online fundamenten voor ondernemers. Met onze betaalbare, SEO-geoptimaliseerde oplossingen zet je je bedrijf stevig op de digitale kaart.
+      Je partner in digitale groei. Wij creëren niet zomaar websites, maar bouwen complete online fundamenten voor ondernemers. Met onze SEO-geoptimaliseerde websites realiseer je gegarandeerd meer bezoekers en dus meer omzet.
       </p>
     </div>
   );
