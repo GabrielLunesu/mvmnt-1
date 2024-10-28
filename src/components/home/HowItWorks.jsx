@@ -13,7 +13,7 @@ export default function HowItWorks() {
               <StepCard
                 number="1"
                 title="Concept & Strategie"
-                description="We starten met een persoonlijk gesprek om jouw visie en doelen scherp te stellen. Vervolgens ontwerpen we een exclusief plan dat naadloos aansluit op jouw merk en ambities."
+                description="We maken een afspraak om persoonlijk kennis te maken. Dit kan ook per telefoon of via een online meeting op elke dag en dagdeel van de week. Wij helpen je graag! Gedurende onze afspraak lopen we door het hele traject en bekijken we of je bepaalde eisen hebt.  Denk aan: Wat is het doel van je website? Wat wil je bereiken? "
                 icon={<FaLightbulb />}
               />
               <StepCard
