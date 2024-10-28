@@ -3,8 +3,8 @@ import { FaLightbulb, FaPencilRuler, FaRocket } from 'react-icons/fa';
 
 export default function HowItWorks() {
     return (
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="py-20  md:px-8 bg-white">
+          <div className="container mx-auto px-8">
             <div className="mb-20 max-w-md text-center mx-auto">
               <span className="text-purple-900 font-bold">Hoe werkt het?</span>
               <h2 className="text-4xl lg:text-5xl font-bold font-heading">Bouw & lanceer zoals jij dat wilt.</h2>
