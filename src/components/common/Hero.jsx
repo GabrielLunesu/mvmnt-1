@@ -20,7 +20,7 @@ export default function Hero() {
         ];
 
         const animateTextIn = () => {
-            const letters = 'mvmnt'.split('');
+            const letters = 'Mvmnt'.split('');
             text.innerHTML = '';
             const timeline = gsap.timeline();
 

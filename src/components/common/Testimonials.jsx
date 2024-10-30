@@ -8,7 +8,7 @@ export default function Testimonials() {
     <div className="py-6 pt-10 bg-white">
       <div className=" mx-auto px-4 ">
         
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 w-fit mx-auto text-white p-4 bg-purple-900 rounded-lg">Wat zeggen onze klanten?</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 w-fit mx-auto text-white p-4 bg-purple-900 rounded-lg">Liefde:</h2>
      
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col gap-6">

@@ -21,8 +21,8 @@ export default function Features() {
     <section className="bg-white py-28">
       <div className="container mx-auto px-4">
         <p className="uppercase text-center text-purple-900 text-xs tracking-widest mb-4">Wat we doen</p>
-        <h1 className="font-heading text-purple-900 text-center text-4xl md:text-5xl font-bold mb-4">Ontworpen voor de moderne ondernemer</h1>
-        <p className="text-purple-900 text-opacity-70 text-lg text-center max-w-2xl mx-auto mb-20">Als full-service digital agency met een specialisatie in web design bieden we complete oplossingen die jouw bedrijf laten groeien, zonder dat je in de techniek hoeft te duiken.</p>
+        <h1 className="font-heading text-purple-900 text-center text-4xl md:text-5xl font-bold mb-4">Ontworpen voor de innoverende ondernemer</h1>
+        <p className="text-purple-900 text-opacity-70 text-lg text-center max-w-2xl mx-auto mb-20">Als web-design Agency met een specialisatie in SEO bieden we complete website oplossingen die jouw bedrijf laat groeien. Zo ben je continu op up-to-date met de laatste online innovaties. </p>
         <div className="flex flex-wrap -m-4">
           <FeatureCard 
             Icon={RiSpeedLine}
@@ -42,7 +42,7 @@ export default function Features() {
           <FeatureCard 
             Icon={RiStore3Line}
             title="Alles onder één dak"
-            description="Naast web design verzorgen we ook marketing, SEO, en onderhoud, zodat je je kunt focussen op wat echt telt: ondernemen."
+            description="Naast web design verzorgen we ook hosting, SEO en onderhoud, zodat jij kunt focussen op wat echt telt: ondernemen."
           />
         </div>
       </div>

@@ -11,3 +11,6 @@ link the socials in the footer to the actual social media pages
 make the seo page
 
 on the seo check component, add a link to the blog post "waarom seo het allerbelangrijkste onderdeel van je website is"
+
+in the pricing add a meest gekozen label on the essential pro pricing card
+

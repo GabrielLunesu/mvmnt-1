@@ -8,7 +8,7 @@ export const caseStudies = [
     "sections": [
       {
         "title": "De uitdaging",
-        "content": "Confiance Visuals, geleid door Kadirr, wilde een website die hun indrukwekkende portfolio effectief presenteert en tegelijkertijd hun unieke stijl en professionaliteit overbrengt aan potentiële klanten. Daarnaast was het essentieel om de website gebruiksvriendelijk te maken, zodat bezoekers gemakkelijk contact kunnen opnemen of een offerte kunnen aanvragen."
+        "content": "Confiance Visuals, wilde een website die hun indrukwekkende portfolio effectief presenteert en tegelijkertijd hun unieke stijl en professionaliteit overbrengt aan potentiële klanten. Daarnaast was het essentieel om de website gebruiksvriendelijk te maken, zodat bezoekers gemakkelijk contact kunnen opnemen of een offerte kunnen aanvragen."
       },
       {
         "title": "Onze oplossing",
@@ -23,7 +23,7 @@ export const caseStudies = [
   {
     "id": 2,
     "title": "Airbro's Parties",
-    "description": "Airbro's Parties is een toonaangevend bedrijf in de verhuur van hoogwaardige partytenten, gerund door Marlon. Met een breed scala aan grote en kleine tenten bieden zij hun diensten aan door heel Nederland. Onze samenwerking richtte zich op het ontwikkelen van een website die hun uitgebreide assortiment en professionele service effectief presenteert aan potentiële klanten.",
+    "description": "Airbro's Parties is een toonaangevend bedrijf in de verhuur van hoogwaardige partytenten. Met een breed scala aan grote en kleine tenten bieden zij hun diensten aan door heel Nederland. Onze samenwerking richtte zich op het ontwikkelen van een website die hun uitgebreide assortiment en professionele service effectief presenteert aan potentiële klanten.",
     "image": "https://i.ibb.co/r7hqCx9/Screenshot-2024-10-16-at-22-49-23.png",
     "slug": "airbros-parties",
     "sections": [
@@ -45,7 +45,7 @@ export const caseStudies = [
   {
     "id": 3,
     "title": "Lunesu",
-    "description": "Lunesu is een gespecialiseerd airco-installatiebedrijf gevestigd in Limburg, gerund door Donato. Zij bieden hoogwaardige oplossingen voor zowel airconditioning als warmtepompen. Onze samenwerking richtte zich op het ontwikkelen van een website die hun expertise en uitgebreide dienstenpakket effectief communiceert naar potentiële klanten.",
+    "description": "Lunesu is een gespecialiseerd airco-installatiebedrijf gevestigd in Limburg. Zij bieden hoogwaardige oplossingen voor zowel airconditioning als warmtepompen. Onze samenwerking richtte zich op het ontwikkelen van een website die hun expertise en uitgebreide dienstenpakket effectief communiceert naar potentiële klanten.",
     "image": "https://i.ibb.co/99VGJfF/Screenshot-2024-10-16-at-22-52-57.png",
     "slug": "lunesu",
     "sections": [

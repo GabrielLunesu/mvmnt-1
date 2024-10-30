@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Step = ({ number, isActive, onClick }) => (
   <motion.div
-    className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center cursor-pointer ${isActive ? 'bg-pink-500' : 'bg-gray-300'}`}
+    className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center cursor-pointer ${isActive ? 'bg-purple-900' : 'bg-gray-300'}`}
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
     onClick={onClick}
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     title: "Ontwikkeling & Design",
-    description: "Onze experts gaan aan de slag met het ontwerpen en bouwen van een website die niet alleen esthetisch sterk is, maar ook gebruiksvriendelijk en SEO-geoptimaliseerd.",
+    description: "Wij gaan aan de slag met het ontwerpen en bouwen van een website die niet alleen esthetisch sterk is, maar ook gebruiksvriendelijk en SEO-geoptimaliseerd.",
   },
   {
     title: "Lancering & Ondersteuning",
@@ -37,7 +37,7 @@ export default function HowItWorks() {
       <div className="container mx-auto px-4">
         <p className="uppercase text-center text-purple-900 text-xs tracking-widest mb-4">hoe het werkt</p>
         <h2 className="text-purple-900 mx-auto text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-        Bij mvmnt maken we het proces simpel en effectief,<br className="hidden md:block" /> zodat jij snel online kunt gaan.
+        Wij zorgen voor bezoekers,<br className="hidden md:block" /> jij maakt ze klant.
         </h2>
         
         <div className="relative mt-12 md:mt-20">

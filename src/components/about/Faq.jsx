@@ -55,23 +55,23 @@ const FaqItem = ({ question, answer }) => {
 export default function Faq() {
   const faqItems = [
     {
-      question: "What is MVMNT?",
+      question: "Wat bedoelen jullie met complimenten garantie?",
       answer: "MVMNT is an innovative bookkeeping software designed for modern business owners. It simplifies financial management and provides intuitive tools for tracking transactions, managing accounts, and generating reports."
     },
     {
-      question: "How to add company details on my invoice?",
+      question: "Wat betekent MVMNT?",
       answer: "To add company details to your invoice, navigate to the 'Settings' section in your Vista dashboard. Look for 'Company Profile' or 'Invoice Customization'. Here, you can input your company name, logo, address, and other relevant details that will appear on your invoices."
     },
     {
-      question: "What payment methods are accepted?",
+      question: "Wat is SEO?",
       answer: "Vista supports a wide range of payment methods including credit/debit cards, bank transfers, and popular online payment platforms. The specific options available may depend on your location and account type."
     },
     {
-      question: "Can I upgrade or downgrade at any time?",
+      question: "Is garantie op jullie SEO diensten?",
       answer: "Yes, you can upgrade or downgrade your Vista plan at any time. Simply go to your account settings and select 'Change Plan'. Any changes will be prorated and reflected in your next billing cycle."
     },
     {
-      question: "What happens when I cancel my subscription?",
+      question: "Wat gebeurt er als ik bij jullie website afneem?",
       answer: "If you cancel your subscription, you'll continue to have access to Vista until the end of your current billing period. After that, your account will be deactivated, but your data will be securely stored for a period of time in case you decide to reactivate your account."
     }
   ];
@@ -79,7 +79,7 @@ export default function Faq() {
   return (
     <section className="py-28 bg-gradient-to-b from-white via-purple-300 to-white">
       <div className="container mx-auto px-4">
-        <h1 className="font-heading text-purple-900 text-4xl text-center font-semibold mb-20">Frequently Asked Questions</h1>
+        <h2 className="font-heading text-purple-900 text-4xl text-center font-semibold mb-20">FAQ</h2>
         <div className="max-w-3xl mx-auto">
           {faqItems.map((item, index) => (
             <FaqItem key={index} question={item.question} answer={item.answer} />

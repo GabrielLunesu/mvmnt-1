@@ -49,7 +49,8 @@ export default function Pricing() {
                             "Whatsapp + email integratie",
                             "Content Management Systeem",
                             "Website beheer training sessie",
-                            "Google Maps integratie"
+                            "Google Maps integratie",
+                            "Amber onderhoud (base guard support)"
                         ]}
                         highlighted={true}
                     />
@@ -67,7 +68,8 @@ export default function Pricing() {
                             "Website beheer training sessie",
                             "Google Maps integratie",
                             "Custom CRM integratie",
-                            "Custom modules"
+                            "Custom modules",
+                            "Flame onderhoud (elevate care support)"
                         ]}
                     />
                     <PricingCard
@@ -80,7 +82,7 @@ export default function Pricing() {
                             "Eigen projectmanager",
                             "Full stack development webapps + mobiele apps",
                             "Schaalbaarheidsplanning",
-                            "Onderhoudssupport op maat",
+                            "Blaze onderhoud (platinum shield support)",
                             "Custom API"
                         ]}
                     />
