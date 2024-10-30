@@ -17,7 +17,7 @@ export default function Pricing() {
         <section className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <h2 className="font-heading text-center text-5xl font-bold mb-4 text-darkPink-900">Flexibel, voor jou</h2>
-                <p className="text-center w-1/2 mx-auto text-gray-600 mb-10">Op maat gemaakte pakketten die aansluiten bij jouw unieke behoeften. Betaalbare oplossingen met maximale impact, ongeacht jouw budget.</p>
+                <p className="text-center w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/2 mx-auto text-gray-600 mb-10">Pakketten die aansluiten bij jouw behoeften. Met de mogelijkheid om per maand te betalen. Zo kun je bedrijfsmiddelen efficiënt inzetten, en ben je niet in een keer veel geld kwijt voor een website.</p>
                 
                 <div className="flex justify-center mb-12">
                     <div className="bg-gray-100 p-1 rounded-full inline-flex">
@@ -41,10 +41,10 @@ export default function Pricing() {
                         title="Essential Pro"
                         price={isMonthly ? "€100" : "€1700"}
                         period={isMonthly ? "per maand" : " eenmalig"}
-                        description="Meer dan een prachtige website. Essential Pro creëert een converterende online aanwezigheid die zowel visueel indruk maakt als technisch optimaal is. Vindbaar, veilig en schaalbaar—dit pakket verhoogt de lat voor elk bedrijf."
+                        description="Meer dan een prachtige website, van bezoeker naar klant. Essential Pro creëert een online aanwezigheid die zowel visueel indruk maakt en technisch optimaal is. Echte groei voor je onderneming—dit pakket verhoogt de lat voor elk bedrijf."
                         features={[
                             "Custom responsive design (4/8/12 pagina's)",
-                            "Basis SEO Installatie",
+                            "On-page SEO Installatie",
                             "Social media integratie",
                             "Whatsapp + email integratie",
                             "Content Management Systeem",
@@ -57,10 +57,10 @@ export default function Pricing() {
                         title="Dynamic"
                         price={isMonthly ? "€250" : "€2500"}
                         period={isMonthly ? "per maand" : " eenmalig"}
-                        description="Ontworpen voor groei. Dynamic combineert een sterke marketingfocus met geavanceerde SEO-optimalisatie en maatwerkfunctionaliteiten. Dit pakket biedt de tools aan om je concurrenten te overtreffen en jouw bedrijf online te laten excelleren."
+                        description="Ontworpen voor groei. Dynamic combineert het “Essential Pro pakket” met specifieke maatwerk functionaliteiten. Dit pakket biedt de tools aan om je concurrenten te overtreffen en jouw bedrijf online te laten excelleren. Doormiddel van een sterke marketingfocus met geavanceerde SEO-optimalisatie."
                         features={[
                             "Custom responsive design (tot 20 pagina's)",
-                            "Geavanceerde SEO Installatie",
+                            "On-page SEO Installatie",
                             "Social media integratie",
                             "Whatsapp + email integratie",
                             "Content Management Systeem",
@@ -74,7 +74,7 @@ export default function Pricing() {
                         title="Limitless"
                         price={isMonthly ? "€500" : "€9000"}
                         period={isMonthly ? "per maand" : " eenmalig"}
-                        description="Onbegrensde mogelijkheden. Een volledig op maat gecodeerde website, exclusief ontwikkeld voor jouw merk. Geen limieten, geen concessies—pure digitale perfectie op het hoogste niveau."
+                        description="Onbegrensde mogelijkheden. Een volledig op maat gecodeerde website, speciaal ontwikkeld voor jouw merk. Geen limieten, geen concessies—pure digitale perfectie op het hoogste niveau."
                         features={[
                             "Volledig maatwerk",
                             "Eigen projectmanager",

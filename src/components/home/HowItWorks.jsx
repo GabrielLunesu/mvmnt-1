@@ -13,19 +13,19 @@ export default function HowItWorks() {
               <StepCard
                 number="1"
                 title="Concept & Strategie"
-                description="We maken een afspraak om persoonlijk kennis te maken. Dit kan ook per telefoon of via een online meeting op elke dag en dagdeel van de week. Wij helpen je graag! Gedurende onze afspraak lopen we door het hele traject en bekijken we of je bepaalde eisen hebt.  Denk aan: Wat is het doel van je website? Wat wil je bereiken? "
+                description="We maken een afspraak om kennis te maken. Dit kan telefonisch of via een online meeting op elke dag en dagdeel van de week. Wij helpen je graag! Gedurende onze afspraak bespreken we het het hele traject en bekijken welke doelen je hebt. Denk aan: Wat is het publiek van je website? Hoe bereik je die?"
                 icon={<FaLightbulb />}
               />
               <StepCard
                 number="2"
                 title="Ontwerp & Ontwikkeling"
-                description="Onze specialisten creëren een op maat gemaakt ontwerp, gecombineerd met de nieuwste technologieën en geavanceerde SEO-technieken. Jouw website wordt een verfijnde balans van schoonheid, snelheid en vindbaarheid."
+                description="Wij creëren een op maat gemaakt ontwerp op basis van jouw wensen. Dit doen we in combinatie met de nieuwste website bouw methoden, en een geoptimaliseerde SEO strategie. Jouw nieuwe website wordt een verfijnde balans van esthetiek, snelheid en vindbaarheid."
                 icon={<FaPencilRuler />}
               />
               <StepCard
                 number="3"
                 title="Livegang & Optimalisatie"
-                description="Bij afronding begeleiden we je stap voor stap door een feilloze lancering. We garanderen dat jouw website direct moeiteloos presteert, geoptimaliseerd voor maximale impact en langdurig succes."
+                description="Bij de overdracht begeleiden we je stap voor stap door een feilloze lancering. We garanderen dat jouw website direct moeiteloos presteert. Optimalisatie voor maximale impact en langdurig succes voor jouw onderneming of project."
                 icon={<FaRocket />}
               />
             </div>
