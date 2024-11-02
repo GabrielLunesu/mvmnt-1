@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const FaqItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +57,15 @@ export default function Faq() {
   const faqItems = [
     {
       question: "Wat bedoelen jullie met complimenten garantie?",
-      answer: "MVMNT is an innovative bookkeeping software designed for modern business owners. It simplifies financial management and provides intuitive tools for tracking transactions, managing accounts, and generating reports."
+      answer: (
+        <>
+          Wij garanderen je dat je complimenten gaat krijgen over je website. Dat is leuk en aardig maar dat is niet wat je wenst te bereiken. Wat je bereiken wil is dat je business groeit door je digitale aanwezigheid. De eerste stap is daarom complimenten krijgen voor je website,{' '}
+          <Link href="/blog/de-waarde-van-een-goede-website" className="text-purple-700 underline hover:text-purple-900">
+            Want wat is de waarde van een goede website?
+          </Link>{' '}
+         
+        </>
+      )
     },
     {
       question: "Wat betekent MVMNT?",

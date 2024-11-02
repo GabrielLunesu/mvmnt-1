@@ -5,7 +5,7 @@ import Team from '@/components/about/Team'
 import HowItWorks from '@/components/about/HowItWorks'
 import Testimonials from '@/components/common/Testimonials'
 import Faq from '@/components/about/Faq'
-import CTA from '@/components/about/CTA'
+import CalendlyCTA from '@/components/calendly/CalendlyCTA'
 
 export const metadata = {
   title: 'Over MVMNT | Innovatief Webdesign Bureau | Websites vanaf €99/maand',
@@ -34,7 +34,7 @@ const About = () => {
         <Testimonials />
         <Faq />
         {/* <Team /> */}
-        <CTA />
+        <CalendlyCTA />
     </>
   )
 }

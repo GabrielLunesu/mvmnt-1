@@ -20,7 +20,7 @@ export default function Hero() {
         ];
 
         const animateTextIn = () => {
-            const letters = 'Mvmnt'.split('');
+            const letters = 'Mvmnt.'.split('');
             text.innerHTML = '';
             const timeline = gsap.timeline();
 
@@ -152,11 +152,11 @@ export default function Hero() {
                     />
                     <div className="relative pt-28 z-10">
                         <h1 className="font-heading text-white text-center text-4xl sm:text-5xl md:text-7xl font-bold max-w-6xl mx-auto mb-6">
-                            <span ref={textRef} className="inline-block"></span> maakt meer dan alleen een website
+                            Gegarandeerd meer omzet met een website van <span ref={textRef} className="inline-block"></span>
                         </h1>
                         <svg ref={svgRef} className="absolute top-0 left-0 w-full h-full pointer-events-none" style={{zIndex: -1}}></svg>
                         <p className="text-center text-white max-w-xl mx-auto text-lg mb-12">
-                            Je partner in digitale groei. Wij creëren niet zomaar websites, maar bouwen complete online fundamenten voor ondernemers. Met onze betaalbare, SEO-geoptimaliseerde oplossingen zet je je bedrijf stevig op de digitale kaart.
+                        Mvmnt maakt het simpel voor jou en moeilijk voor ons. wij bouwen websites die niet alleen mooi zijn, maar resultaat opleveren. Met een focus op helder design en gebruiksvriendelijke functies zorgen we voor een snelle, effectieve online start. Daarnaast is je website SEO geoptimaliseerd, zodat deze zo hoog mogelijk in Google verschijnt.
                         </p>
                         <div className="mb-12 text-center">
                             <Link href="/contact" className="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full">
