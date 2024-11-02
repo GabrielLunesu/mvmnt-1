@@ -23,27 +23,23 @@ export default function Testimonials() {
 
 const testimonials = [
   {
-    quote: "It was the best of times, it was the worst of times. It was the best of times, it was the worst of times.It was the best of times, it was the worst of times.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-    image: "https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/2f93ecab-2aaa-4b12-af29-d0cb0eb2e368/Professional-Headshot-Vancouver?format=750w"
+    quote: "Mvmnt heeft ons geweldig geholpen met een professionele website voor onze partytenten. Klanten kunnen nu makkelijk reserveren en we hebben veel positieve reacties gekregen. Sinds de lancering zijn onze boekingen flink gestegen waardoor we ons bedrijf verder konden uitbreiden!",
+    name: "Marlon",
+    title: "Airbros Parties",
   },
   {
-    quote: "It was the best of times, it was the worst of times. It was the best of times, it was the worst of times.It was the best of times, it was the worst of times.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-    image: "https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/2f93ecab-2aaa-4b12-af29-d0cb0eb2e368/Professional-Headshot-Vancouver?format=750w"
+    quote: "Mvmnt heeft ons geholpen om ons unieke concept van gratis woningverkoop helder in beeld te brengen. Het biedplatform is super gebruiksvriendelijk en onze klanten zijn daar erg enthousiast over. We hebben al veel nieuwe gebruikers en aanbiedingen sinds de lancering. Echt een gamechanger voor ons!",
+    name: "Leonard",
+    title: "Troa",
   },
   {
-    quote: "It was the best of times, it was the worst of times. It was the best of times, it was the worst of times.It was the best of times, it was the worst of times.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-    image: "https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/2f93ecab-2aaa-4b12-af29-d0cb0eb2e368/Professional-Headshot-Vancouver?format=750w"
+    quote: "Mvmnt heeft een schitterende website voor ons gemaakt die onze videoclips echt laat stralen. Klanten vinden het nu veel eenvoudiger om contact met ons op te nemen, en dat heeft geleid tot een flinke stijging in onze boekingen. We zijn echt onder de indruk van het resultaat!",
+    name: "Kadirr",
+    title: "Confiance Visuals",
   },
   {
-    quote: "It was the best of times, it was the worst of times. It was the best of times, it was the worst of times.It was the best of times, it was the worst of times.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-    image: "https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/2f93ecab-2aaa-4b12-af29-d0cb0eb2e368/Professional-Headshot-Vancouver?format=750w"
+    quote: "De samenwerking met Mvmnt was top! Onze nieuwe website legt de nadruk op onze airco-oplossingen en maakt het voor klanten heel makkelijk om informatie te vinden. Sinds de lancering zien we een aanzienlijke toename in aanvragen. Dit heeft ons bedrijf echt een boost gegeven!",
+    name: "Donato",
+    title: "Lunesu Airco Techniek",
   },
 ];

@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { Star } from "lucide-react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -74,16 +75,25 @@ export const InfiniteMovingCards = ({
             key={item.name}>
             <blockquote>
               <div className="flex items-center mb-3 sm:mb-4">
-                <Image
+                {/* <Image
                   src={item.image}
                   alt={item.name}
                   width={35}
                   height={35}
                   className="rounded-full mr-2 sm:mr-3"
-                />
+                /> */}
                 <div>
                   <p className="text-xs sm:text-base font-semibold">{item.name}</p>
                   <p className="text-[10px] sm:text-sm text-purple-700">{item.title}</p>
+                  <div className="flex items-center gap-0.5 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        size={12}
+                        className="fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
               <p className="relative z-20 text-[11px] sm:text-sm leading-[1.6] font-normal">
