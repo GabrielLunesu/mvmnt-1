@@ -13,7 +13,7 @@ export default function Testimonials() {
         <div className="max-w-8xl mx-auto">
           <div className="flex flex-col gap-2">
             <InfiniteMovingCards items={testimonials} direction="left" speed="fast" />
-            <InfiniteMovingCards items={testimonials.slice().reverse()} direction="right" speed="fast" />
+            {/* <InfiniteMovingCards items={testimonials.slice().reverse()} direction="right" speed="fast" /> */}
           </div>
         </div>
       </div>
@@ -23,22 +23,22 @@ export default function Testimonials() {
 
 const testimonials = [
   {
-    quote: "Mvmnt heeft ons geweldig geholpen met een professionele website voor onze partytenten. Klanten kunnen nu makkelijk reserveren en we hebben veel positieve reacties gekregen. Sinds de lancering zijn onze boekingen flink gestegen waardoor we ons bedrijf verder konden uitbreiden!",
+    quote: "Wij verhuren partytenten en zijn zeer tevreden over onze samenwerking met Mvmnt. Ze denken mee over het creatieve proces en de impact op onze bedrijfsvoering. Vanaf de intake tot de oplevering verliep alles vlekkeloos, en dankzij de nieuwe website zien we duidelijk meer aanvragen. Ik raad Mvmnt van harte aan voor iedereen die een website wil om zijn bedrijf te laten groeien.",
     name: "Marlon",
     title: "Airbros Parties",
   },
   {
-    quote: "Mvmnt heeft ons geholpen om ons unieke concept van gratis woningverkoop helder in beeld te brengen. Het biedplatform is super gebruiksvriendelijk en onze klanten zijn daar erg enthousiast over. We hebben al veel nieuwe gebruikers en aanbiedingen sinds de lancering. Echt een gamechanger voor ons!",
+    quote: "Wij hadden een idee voor een eigen platform voor ogen, dat Mvmnt in de praktijk heeft gebracht. We kunnen alleen maar zeggen dat jullie altijd meegedacht hebben in oplossingen in de plaats van problemen. We weten dat we het jullie niet makkelijk hebben gemaakt, maar zijn ontzettend blij met het resultaat. Mannen, bedankt!",
     name: "Leonard",
     title: "Troa",
   },
   {
-    quote: "Mvmnt heeft een schitterende website voor ons gemaakt die onze videoclips echt laat stralen. Klanten vinden het nu veel eenvoudiger om contact met ons op te nemen, en dat heeft geleid tot een flinke stijging in onze boekingen. We zijn echt onder de indruk van het resultaat!",
+    quote: "Omdat wij een jong en fris bedrijf zijn dat zich bezig houdt met videografie, zochten we naar een website bouwer die ons de uitstraling kon geven, die bij onze activiteiten pasten. We zijn heel blij met de nieuwe website.",
     name: "Kadirr",
     title: "Confiance Visuals",
   },
   {
-    quote: "De samenwerking met Mvmnt was top! Onze nieuwe website legt de nadruk op onze airco-oplossingen en maakt het voor klanten heel makkelijk om informatie te vinden. Sinds de lancering zien we een aanzienlijke toename in aanvragen. Dit heeft ons bedrijf echt een boost gegeven!",
+    quote: "We zijn zeer tevreden met de nieuwe website voor ons aircobedrijf. De intake was grondig en de communicatie helder. De feedback op het ontwerp werd direct opgepakt en aangepast. De website is gebruiksvriendelijk en heeft een frisse uitstraling. We ontvangen al positieve reacties van klanten en merken dat we beter gevonden worden.",
     name: "Donato",
     title: "Lunesu Airco Techniek",
   },
