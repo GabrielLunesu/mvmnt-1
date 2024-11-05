@@ -92,7 +92,7 @@ export default function Faq() {
   return (
     <section className="py-28 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-heading text-purple-900 text-4xl text-center font-semibold mb-20">FAQ</h2>
+        <h2 className="font-heading text-purple-900 text-4xl text-center font-semibold mb-20">Meest gestelde vragen</h2>
         <div className="max-w-3xl mx-auto">
           {faqItems.map((item, index) => (
             <FaqItem key={index} question={item.question} answer={item.answer} />
