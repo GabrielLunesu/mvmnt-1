@@ -10,8 +10,8 @@ export default function Testimonials() {
         
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 w-fit mx-auto text-white p-4 bg-purple-900 rounded-lg">Liefde:</h2>
      
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col gap-6">
+        <div className="max-w-8xl mx-auto">
+          <div className="flex flex-col gap-2">
             <InfiniteMovingCards items={testimonials} direction="left" speed="fast" />
             <InfiniteMovingCards items={testimonials.slice().reverse()} direction="right" speed="fast" />
           </div>

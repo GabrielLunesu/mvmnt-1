@@ -4,7 +4,7 @@ import Features from '@/components/about/Features'
 import Team from '@/components/about/Team'
 import HowItWorks from '@/components/about/HowItWorks'
 import Testimonials from '@/components/common/Testimonials'
-import Faq from '@/components/about/Faq'
+import Faq from '@/components/common/Faq'
 import CalendlyCTA from '@/components/calendly/CalendlyCTA'
 
 export const metadata = {

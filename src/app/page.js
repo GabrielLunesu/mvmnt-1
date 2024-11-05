@@ -5,7 +5,7 @@ import CTA from '@/components/home/CTA';
 import SeoCheck from '@/components/home/SeoCheck';
 import HeroParallax from '@/components/common/HeroParallax';
 import CalendlyCTA from '@/components/calendly/CalendlyCTA';
-
+import Faq from '@/components/common/Faq';
 export const metadata = {
   title: 'MVMNT | Professionele Websites vanaf €99 per maand | Webdesign Bureau',
   description: 'MVMNT levert hoogwaardige, op maat gemaakte websites voor elk budget. Ontdek onze betaalbare webdesign oplossingen vanaf slechts €99 per maand. Boost uw online aanwezigheid nu!',
@@ -32,6 +32,7 @@ export default function Home() {
       <HowItWorks />
       <SeoCheck />
       <Pricing />
+      <Faq />
       <CalendlyCTA />
     </>
   );
