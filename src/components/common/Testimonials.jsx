@@ -12,7 +12,9 @@ export default function Testimonials() {
      
         <div className="max-w-8xl mx-auto">
           <div className="flex flex-col gap-2">
-            <InfiniteMovingCards items={testimonials} direction="left" speed="fast" />
+            <InfiniteMovingCards items={testimonials} direction="left" speed="normal" />
+            <InfiniteMovingCards items={testimonials} direction="right" speed="normal" />
+
             {/* <InfiniteMovingCards items={testimonials.slice().reverse()} direction="right" speed="fast" /> */}
           </div>
         </div>

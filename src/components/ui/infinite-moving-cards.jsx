@@ -47,9 +47,9 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "35s");
+        containerRef.current.style.setProperty("--animation-duration", "30s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "60s");
       } else {
         containerRef.current.style.setProperty("--animation-duration", "80s");
       }
@@ -59,7 +59,7 @@ export const InfiniteMovingCards = ({
     (<div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller items-center relative z-20 max-w-8xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_95%,transparent)]",
         className
       )}>
       <ul
@@ -71,34 +71,25 @@ export const InfiniteMovingCards = ({
         )}>
         {items.map((item, idx) => (
           <li
-            className="w-[250px] sm:w-[450px] max-w-full relative rounded-2xl border-4 border-purple-900 flex-shrink-0 px-3 sm:px-8 py-3 sm:py-6 bg-white bg-opacity-10 backdrop-blur-md text-purple-900"
+            className="w-[250px] sm:w-[450px] max-w-full relative rounded-2xl border-4 border-purple-900 flex-shrink-0 bg-purple-900 backdrop-blur-md text-purple-900 flex"
             key={item.name}>
-            <blockquote>
-              <div className="flex items-center mb-3 sm:mb-4">
-                {/* <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={35}
-                  height={35}
-                  className="rounded-full mr-2 sm:mr-3"
-                /> */}
-                <div>
-                  <p className="text-xs sm:text-base font-semibold">{item.name}</p>
-                  <p className="text-[10px] sm:text-sm text-purple-700">{item.title}</p>
-                  <div className="flex items-center gap-0.5 mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        size={12}
-                        className="fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="relative z-20 text-[11px] sm:text-sm leading-[1.6] font-normal">
+            <blockquote className="flex flex-col p-3 sm:p-6 flex-grow">
+              <p className="relative text-[11px] sm:text-sm leading-[1.6] font-normal text-white mb-2">
                 {item.quote}
               </p>
+              <div className="mt-auto">
+                <p className="text-xs sm:text-base font-semibold text-white">{item.name}</p>
+                <p className="text-[10px] sm:text-sm text-white">{item.title}</p>
+                <div className="flex items-center gap-0.5 mt-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      size={12}
+                      className="fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+              </div>
             </blockquote>
           </li>
         ))}
