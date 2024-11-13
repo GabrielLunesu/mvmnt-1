@@ -102,7 +102,12 @@ function PricingCard({ title, price, period, description, features, highlighted 
         : "bg-purple-900 text-white hover:bg-purple-800";
 
     return (
-        <div className={`w-full md:w-96 p-6 rounded-3xl shadow-lg ${cardClass} ${highlighted ? 'transform scale-105' : ''} flex flex-col`}>
+        <div className={`w-full md:w-96 p-6 rounded-3xl shadow-lg ${cardClass} ${highlighted ? 'transform scale-105' : ''} flex flex-col relative`}>
+            {highlighted && (
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-500 to-green-300 text-darkPink-900 px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+                    Meest gekozen
+                </div>
+            )}
             <h3 className="text-3xl font-bold mb-4">{title}</h3>
             <div className="flex items-end mb-4">
                 <span className="text-4xl font-bold">{price}</span>
