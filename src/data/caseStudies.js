@@ -86,26 +86,5 @@ export const caseStudies = [
     ]
   },
   
-  {
-    "id": 5,
-    "title": "Hekimade",
-    "description": "Hekimade is een gerenommeerd videografiebedrijf in Nederland, gespecialiseerd in het produceren van hoogwaardige video's voor grote namen en bedrijven. Met uitgebreide expertise in VFX biedt Hekimade innovatieve en visueel indrukwekkende videoproducties. Onze samenwerking richtte zich op het ontwikkelen van een website die hun professionele diensten en indrukwekkende portfolio effectief presenteert aan potentiële klanten.",
-    "image": "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
-    "slug": "hekimade",
-    "sections": [
-      {
-        "title": "De uitdaging",
-        "content": "Hekimade wilde een website die hun status als toonaangevend videografiebedrijf in Nederland weerspiegelt. De uitdaging was om een platform te creëren dat hun uitgebreide portfolio van hoogwaardige videoprojecten en expertise in VFX op een aantrekkelijke en professionele manier presenteert. Daarnaast was het belangrijk om de website zo te ontwerpen dat potentiële klanten gemakkelijk contact konden opnemen en meer informatie konden aanvragen over hun diensten."
-      },
-      {
-        "title": "Onze oplossing",
-        "content": "Wij hebben een stijlvolle en visueel aantrekkelijke website ontwikkeld die de hoogwaardige videoproducties van Hekimade centraal stelt. Door gebruik te maken van grote, impactvolle videoclips en afbeeldingen uit hun portfolio, hebben we een dynamische en meeslepende gebruikerservaring gecreëerd. De navigatie is intuïtief ingericht, met duidelijke secties voor verschillende diensten, case studies en een blog voor het delen van expertise. We hebben ook een gebruiksvriendelijk contactformulier en call-to-action knoppen geïntegreerd om het voor bezoekers eenvoudig te maken om contact op te nemen of offertes aan te vragen. Bovendien is de website volledig responsief ontworpen, zodat deze op alle apparaten optimaal presteert."
-      },
-      {
-        "title": "Behaalde resultaten",
-        "content": "Sinds de lancering van de nieuwe website heeft Hekimade een aanzienlijke toename in websitebezoeken en klantinteracties ervaren. Klanten geven positieve feedback over de professionele uitstraling en de gemakkelijke navigatie, wat heeft geleid tot een groei in het aantal aanvragen voor videoproducties en VFX-diensten. De indrukwekkende presentatie van hun portfolio heeft bijgedragen aan het aantrekken van grotere en gerenommeerdere klanten, waardoor Hekimade's positie als een vooraanstaand videografiebedrijf in Nederland verder is versterkt."
-      }
-    ]
-  }
   
 ];

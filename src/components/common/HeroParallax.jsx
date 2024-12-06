@@ -51,15 +51,7 @@ export const products = [
       height: 600,
     },
   },
-  {
-    title: "Heki Made",
-    link: "https://hekimade.com/",
-    thumbnail: {
-      src: "https://i.ibb.co/tsQLY0b/Screenshot-2024-10-16-at-22-59-20.png",
-      width: 800,
-      height: 600,
-    },
-  },
+  
   {
     title: "Synchronique Agency",
     link: "https://hekimade.com/",
